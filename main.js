@@ -10,9 +10,11 @@ const movieSearchable = document.querySelector('#movie-searchable');
 
 function movieSection(movies) {
     return movies.map((movie) => {
-        return `
-            <img src=${imageUrl + movie.poster_path} data-movie-id=${movie.id}/>
-        `;
+        if (movie.poster_path){
+            return `
+                <img src=${imageUrl + movie.poster_path} data-movie-id=${movie.id}/>
+            `;
+        }
     })
 }
 
