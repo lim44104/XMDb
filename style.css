@@ -74,11 +74,13 @@ body {
   section{
       display: flex;
       width: 100%;
-      overflow-x:auto;
+      overflow-y:hidden;
+      margin-left: 15px;
+      margin-right: 15px;
   }
 
   section img {
-      width: 300px;
+      width: 250px;
       transition: 250ms all;
   }
 
@@ -86,6 +88,15 @@ body {
       margin-left: 0 40px;
       transform: scale(1.2);
       cursor: pointer;
+  }
+
+  .content{
+      border: 1px solid rgb(255, 255, 255);
+      height: 300px;
+  }
+
+  .content-display{
+      display: block;
   }
   
   .card{
