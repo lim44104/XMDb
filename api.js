@@ -26,6 +26,13 @@ function searchMovie(value) {
     requestMovies(url, renderSearchMovies, handleError);
 }
 
+function searchMovie2(value) {
+    const path = '/search/movie';
+    const url = generateUrl(path) + '&query=' + value;
+
+    requestMovies(url, homeMov, handleError);
+}
+
 function getUpcomingMovies() {
     const path = '/movie/upcoming';
     const url = generateUrl(path);
