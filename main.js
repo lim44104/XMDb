@@ -134,6 +134,8 @@ function renderSearchMovies(data) {
     const movieBlock = createMovieContainer(movies);
     movieSearchable.appendChild(movieBlock);
     console.log('Data: ',data);
+    console.log(data.results[0].id);
+    console.log(data.results[0].overview);
 }
 
 function renderSearchSec(data) {
