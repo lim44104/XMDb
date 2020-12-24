@@ -210,6 +210,7 @@ document.onclick = function(event) {
     if (target.tagName.toLowerCase() === 'img'){
         console.log('works!');
         const movieId = target.dataset.movieId;
+        //console.log(target);
         //console.log(target.dataset);
         console.log(movieId);
         //const section = target.parentElement; //section
