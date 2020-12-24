@@ -2,6 +2,7 @@
 body {
     padding-top: 3.5rem;
     background-color:black; /*set background color to black*/
+    padding: 40px;
   }
   
   .bd-placeholder-img {
@@ -71,7 +72,7 @@ body {
 
   */
 
-  section{
+  .section{
       display: flex;
       width: 100%;
       overflow-y:hidden;
@@ -90,18 +91,57 @@ body {
       cursor: pointer;
   }
 
-  .content{
-      border: 1px solid rgb(255, 255, 255);
-      height: 300px;
+  .content {
+    display: none;
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding: 20px;
+  }
+
+  .content div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px;
   }
 
   .content-display{
-      display: block;
+      display: none;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+  }
+
+  #content-close {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    padding: 10px;
+    /* width: 35px;; */
+    border: 1px solid lightgrey;
+    border-radius: 45%;
+    left: 20px;
+  }
+
+  #movie-searchable{
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .movie{
+    margin-bottom: 50px;
   }
   
   .card{
     border: none;
     border-radius: 2px;
+  }
+  h2{
+    color: white;
   }
   
   
