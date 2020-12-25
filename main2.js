@@ -142,36 +142,86 @@ function renderSearchMovies(data) {
 function homeMov(data){
     movieSec.innerHTML = '';
     const movies = data.results;
+
+    const header =document.createElement('h2');
+    header.innerHTML = "Movie";
+    const cardColumn = document.createElement('div');
+    cardColumn.setAttribute('class','card-group');
+    header.appendChild(cardColumn);
+
+    const cardRow = document.createElement('div');
+    cardRow.setAttribute('class','row flex-row flex-nowrap');
+    cardColumn.appendChild(cardRow);
     console.log(movies);
     console.log(movies.length);
-    let output = "";
+    //let output = "";
     
-    output +=
-        `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
-    for (const i in movies){
-        const movie = movies[i];
-        output += 
-            `<div class="card">` +
-            `<a href="movie.html">` +
-            `<img src="` +
-            imageUrl + movie.poster_path +
-            `" class="card-img-top" alt="` +
-            movie.title +
-            `"></a>` +
-            `<div class="card-body">` +
-            `<h5 class="card-title">` +
-            movie.title +
-            `</h5>`;
-        if(movie.overview !=null) {
-            output +=
-                `<p style="font-size: 12px;" class="card-text">` +
-                movie.overview +
-                `</p>`;
-        }
-        }
-    output += `</div>`;
+    //output +=
+    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
     
-    movieSec.innerHTML=output;
+    movies.map((movie) => {
+        if(movie.poster_path){
+            //const movie = movies[i];
+            const cardDiv = document.createElement('div');
+            cardDiv.setAttribute('class','col-2');
+            cardRow.appendChild(cardDiv);
+
+            const movieBox = document.createElement('div');
+            movieBox.setAttribute('class','card');
+            cardDiv.appendChild(movieBox);
+            
+            const moviePage = document.createElement('a');
+            moviePage.setAttribute('href',"movie.html");
+            movieBox.appendChild(moviePage);
+            
+            const img = document.createElement('img');
+            img.src = imageUrl + movie.poster_path;
+            img.setAttribute('class','card-img-top');
+            img.alt = movie.title;
+            moviePage.appendChild(img);
+            
+            const cardBody = document.createElement('div');
+            cardBody.setAttribute('class','card-body');
+            movieBox.appendChild(cardBody);
+            
+            const bodyTittle = document.createElement('h5');
+            bodyTittle.setAttribute('class','card-tittle');
+            bodyTittle.innerHTML = movie.title;
+            cardBody.appendChild(bodyTittle);
+            
+            
+            
+            /*
+            output += 
+                
+                `<div class="card">` +
+                `<a href="movie.html">` +
+                `<img src="` +
+                imageUrl + movie.poster_path +
+                `" class="card-img-top" alt="` +
+                movie.title +
+                `"></a>` +
+                `<div class="card-body">` +
+                `<h5 class="card-title">` +
+                movie.title +
+                `</h5>`;
+                
+            
+            if(movie.overview !=null) {
+                output +=
+                    `<p style="font-size: 12px;" class="card-text">` +
+                    movie.overview +
+                    `</p>`;
+            }*/
+        }
+        
+        
+        })
+    
+    //output += `</div>`;
+    
+    //movieSec.innerHTML=output;
+    movieSec.appendChild(header);
 }
 
 function renderSearchSec(data) {

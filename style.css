@@ -80,6 +80,15 @@ body {
       margin-right: 15px;
   }
 
+  .cardsec{
+    display: flex;
+    width: 100%;
+    overflow-y:hidden;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
   section img {
       width: 250px;
       transition: 250ms all;
@@ -143,5 +152,16 @@ body {
   h2{
     color: white;
   }
+  h5{
+    color: black;
+  }
+
+  .row{
+    
+    width: 100%;
+    overflow-y:hidden;
+    
+  }
+
   
   
