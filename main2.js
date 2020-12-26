@@ -6,6 +6,7 @@ const inputElement = document.querySelector('#inputValue');
 const movieSearchable = document.querySelector('#movie-searchable');
 const movieContainer = document.querySelector('#movie-container');
 const movieSec = document.getElementById("movieSec");
+const singleMovieContainer = document.getElementById("sigleMovieContainerDiv");
 
 function movieSection(movies) {
     const section = document.createElement('section');
@@ -224,6 +225,24 @@ function homeMov(data){
     movieSec.appendChild(header);
 }
 
+function singleMovie(data,movieId) {
+    //const movies = data.results;
+    /*
+    movieImage = imageUrl + data.poster_path;
+
+    const img = document.createElement('img');
+    img.src = movieImage;
+    img.setAttribute('class','card-img-top');
+    img.alt = data.title;
+    */
+
+    var z = document.createElement('p'); // is a node
+    z.innerHTML = 'test satu dua tiga';
+   
+    singleMovieContainer.appendChild(z);
+
+}
+
 function renderSearchSec(data) {
     const movies = data.results;
     movieSecSec(movies);
@@ -254,12 +273,15 @@ buttonElement.onclick = function(event) {
     const value = inputElement.value;
     //searchMovie(value);
     searchMovie2(value);
-    //singMovie(value);
 
     inputElement.value = '';
     console.log('Value: ',value);
 }
 
+function newMovie(m){
+    console.log(m);
+    console.log(m.title);
+}
 
 
 /*
@@ -297,11 +319,24 @@ document.onclick = function(event) {
 
     const target = event.target;
     if (target.tagName.toLowerCase() === 'img'){
-        console.log('works!');
+        //console.log('works!');
         const movieId = target.dataset.movieId;
         //console.log(target);
         //console.log(target.dataset);
-        console.log(movieId);
+        //console.log(target.dataset);
+        //console.log(movieId);
+
+        const path =`/movie/${movieId}`;
+        const url = generateUrl(path);
+        fetch(url)
+            .then((res) => res.json())
+            .then(newMovie)
+            .catch(() => {
+                console.log('Error: ',error);
+            })
+
+        
+
         //const section = target.parentElement; //section
         //const content = section.nextElementSibling; //content
         //content.classList.add('content-display');
