@@ -280,15 +280,7 @@ function handleError() {
     console.log("Error: ",error);
 }
 
-buttonElement.onclick = function(event) {
-    event.preventDefault();
-    const value = inputElement.value;
-    //searchMovie(value);
-    searchMovie2(value);
 
-    inputElement.value = '';
-    console.log('Value: ',value);
-}
 
 function newMovie(m){
     //location.replace("movie.html");
