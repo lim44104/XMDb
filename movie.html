@@ -15,7 +15,7 @@
     <link href="style.css" rel="stylesheet">
   </head>
 
-  <body onload="singleMovie()" class="single-movie">
+  <body class="single-movie">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navnav">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +46,7 @@
 </nav>
 
 
-  <input type="submit" id="search" class="btn btn-danger mb-2 float-right search-button">
+<input type="submit" class="hideb" id="search" class="btn btn-danger mb-2 float-right search-button">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
@@ -55,29 +55,19 @@
         <div class="container single-movie-container" id="sigleMovieContainerDiv"></div>
   </div>
 
-  <div class="jumbotron">
-    <h1 class="display-4">Hello, world</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </div>
-
-  <h1 class="header-main-title single-comic-title"></h1>
-  <div class="card mb-3">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="" class="card-img" alt="">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">
-            
-          </h5>
-        </div>
-      </div>
+  <h2 id="movieMainTitle">Movie</h2>
+  <div class="card flex-md-row mb-4 box-shadow h-md-250" id="movieCard">
+    <div>
+      <img class="card-img-right flex-auto d-md-block img-fluid" id="movieImage" alt="Picture of Movie" src="">
+    </div>
+    <div class="card-body d-flex flex-column align-items-start">
+      <h3 class="mb-0 text-dark" id="movieName">Movie Title</h3>
+      <p class="card-text mb-3" id="movieDescription">mmmmm</p>
     </div>
   </div>
+
+  <div class="singlemovie"></div>
+  
 
 <footer class="container foot">
   <p>&copy; Company 2017-2020</p>
@@ -85,9 +75,28 @@
 
 <script src="api.js"></script>
 <script src="main2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<script>
+  function singlemoviefunction() {
+    var id = sessionStorage.getItem('movie-id');
+    const path =`/movie/${id}`;
+        const url = generateUrl(path);
+        fetch(url)
+            .then((res) => res.json())
+            .then(function(res){
+              console.log(res);
+              movieName.innerHTML = res.title;
+              movieDescription.innerHTML = res.overview;
+              movieImage.src = imageUrl + res.poster_path;
+            })
+            .catch(() => {
+                console.log('Error: ',error);
+            })
+  }
+  singlemoviefunction()
+</script>
   </body>
 </html>

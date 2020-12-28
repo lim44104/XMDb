@@ -7,6 +7,9 @@ const movieSearchable = document.querySelector('#movie-searchable');
 const movieContainer = document.querySelector('#movie-container');
 const movieSec = document.getElementById("movieSec");
 const singleMovieContainer = document.getElementById("sigleMovieContainerDiv");
+const movieName = document.getElementById("movieName");
+const movieDescription = document.getElementById("movieDescription");
+const movieImage = document.getElementById("movieImage");
 
 function movieSection(movies) {
     const section = document.createElement('section');
@@ -15,11 +18,18 @@ function movieSection(movies) {
     movies.map((movie) => {
         if (movie.poster_path){
             
+            const mpage = document.createElement('a');
+            mpage.setAttribute('href',"movie.html");
+            mpage.setAttribute('class','clickToGetId');
+            mpage.setAttribute('data-id',movie.id);
+
             const img = document.createElement('img');
             img.src = imageUrl + movie.poster_path;
             img.setAttribute('data-movie-id',movie.id);
 
-            section.appendChild(img);
+            mpage.appendChild(img);
+
+            section.appendChild(mpage);
             
             
             /*
@@ -173,11 +183,13 @@ function homeMov(data){
             
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"movie.html");
+            moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('data-id',movie.id);
             movieBox.appendChild(moviePage);
             
             const img = document.createElement('img');
             img.src = imageUrl + movie.poster_path;
-            img.setAttribute('class','card-img-top');
+            img.setAttribute('class','card-img-top clickme');
             img.alt = movie.title;
             moviePage.appendChild(img);
             
@@ -279,8 +291,11 @@ buttonElement.onclick = function(event) {
 }
 
 function newMovie(m){
+    //location.replace("movie.html");
     console.log(m);
     console.log(m.title);
+    
+    //movieName.innerHTML = m.title;
 }
 
 
@@ -316,9 +331,12 @@ function createVideoTemplate(data) {
 
 //Event Delegation
 document.onclick = function(event) {
-
+    
     const target = event.target;
+    //event.preventDefault();
+    /*
     if (target.tagName.toLowerCase() === 'img'){
+    //if(target.classList.contains(clickme)){
         //console.log('works!');
         const movieId = target.dataset.movieId;
         //console.log(target);
@@ -353,7 +371,8 @@ document.onclick = function(event) {
             });
         */
 
-    }
+    //}
+    
 
     //not works!!
     /*
@@ -362,8 +381,9 @@ document.onclick = function(event) {
         content.classList.remove('content-display');
     }
     */
+
+    $(document).on('click','.clickToGetId',function(){
+        id = $(this).attr('data-id');
+        sessionStorage.setItem('movie-id',id);
+    })
 }
-searchMovie('spiderman');
-getUpcomingMovies();
-getTopRatedMovies();
-getPopularMovies();
