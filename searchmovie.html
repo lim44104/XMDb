@@ -44,12 +44,14 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
+
     <div class="jumbotron">
+        <h1>Search Movie</h1>
         <form id="connectForm">
             <div class="form-group">
             <input required type="text" name="movie" id="inputValue" class="form-control search-box" placeholder="Exp: Avengers, Titanic, Call Me By Your Name, etc...">
             </div>
-            <input type="submit" id="search" class="btn btn-danger mb-2 float-right search-button" onclick="submitFUnction()">
+            <input type="submit" id="search" class="btn btn-danger mb-2 float-right search-button">
         </form>
     </div>
 
@@ -81,6 +83,7 @@
 
             inputElement.value = '';
             console.log('Value: ',value);
+
         }
     </script>
   </body>

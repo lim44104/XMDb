@@ -33,6 +33,20 @@ function searchMovie2(value) {
     requestMovies(url, homeMov, handleError);
 }
 
+function searchActor(value) {
+    const path = '/search/person';
+    const url = generateUrl(path) + '&query=' + value;
+
+    requestMovies(url, homeAct, handleError);
+}
+
+function searchTv(value) {
+    const path = '/search/tv';
+    const url = generateUrl(path) + '&query=' + value;
+
+    requestMovies(url, homeTv, handleError);
+}
+
 function getUpcomingMovies() {
     const path = '/movie/upcoming';
     const url = generateUrl(path);
@@ -53,6 +67,8 @@ function getPopularMovies() {
     const render = renderMovies.bind({tittle: 'Popular Movies'});
     requestMovies(url, render, handleError);
 }
+
+
 
 function getVideosById(movieId){
     const url = generateUrl(`/movie/${movieId}/videos`);

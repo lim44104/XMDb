@@ -10,26 +10,56 @@ const singleMovieContainer = document.getElementById("sigleMovieContainerDiv");
 const movieName = document.getElementById("movieName");
 const movieDescription = document.getElementById("movieDescription");
 const movieImage = document.getElementById("movieImage");
+const actorName = document.getElementById("actorName");
+const actorDescription = document.getElementById("actorDescription");
+const actorImage = document.getElementById("actorImage");
+const tvName = document.getElementById("tvName");
+const tvDescription = document.getElementById("tvDescription");
+const tvImage = document.getElementById("tvImage");
 
 function movieSection(movies) {
     const section = document.createElement('section');
     section.classList = 'section';
 
+    const cardColumn = document.createElement('div');
+    cardColumn.setAttribute('class','card-group');
+    section.appendChild(cardColumn);
+    
+    const cardRow = document.createElement('div');
+    cardRow.setAttribute('class','row flex-row flex-nowrap');
+    cardColumn.appendChild(cardRow);
+
     movies.map((movie) => {
         if (movie.poster_path){
             
-            const mpage = document.createElement('a');
-            mpage.setAttribute('href',"movie.html");
-            mpage.setAttribute('class','clickToGetId');
-            mpage.setAttribute('data-id',movie.id);
+            const cardDiv = document.createElement('div');
+            cardDiv.setAttribute('class','col-2');
+            cardRow.appendChild(cardDiv);
 
+            const movieBox = document.createElement('div');
+            movieBox.setAttribute('class','card');
+            cardDiv.appendChild(movieBox);
+            
+            const moviePage = document.createElement('a');
+            moviePage.setAttribute('href',"movie.html");
+            moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('data-id',movie.id);
+            movieBox.appendChild(moviePage);
+            
             const img = document.createElement('img');
             img.src = imageUrl + movie.poster_path;
-            img.setAttribute('data-movie-id',movie.id);
-
-            mpage.appendChild(img);
-
-            section.appendChild(mpage);
+            img.setAttribute('class','card-img-top clickme');
+            img.alt = movie.title;
+            moviePage.appendChild(img);
+            
+            const cardBody = document.createElement('div');
+            cardBody.setAttribute('class','card-body');
+            movieBox.appendChild(cardBody);
+            
+            const bodyTittle = document.createElement('h5');
+            bodyTittle.setAttribute('class','card-tittle');
+            bodyTittle.innerHTML = movie.title;
+            cardBody.appendChild(bodyTittle);
             
             
             /*
@@ -44,66 +74,7 @@ function movieSection(movies) {
     return section;
 }
 
-function movieSecSec(movies) {
-    //const section = document.createElement('section');
-    //section.classList = 'section';
-    const movieSec = document.getElementById("movieSec");
 
-    movies.map((movie) => {
-        if (movie.poster_path){
-            let output = "";
-            output +=
-                '<h2 id="movieMainTitle">Movie</h2>' + '<div class="card-columns">';
-            for (const i in movies){
-                const movie = movies[i];
-                output += 
-                    '<div class="card">' +
-                    '<a href="movie.html">' +
-                    '<img src="' +
-                    imageUrl + movie.poster_path +
-                    '" class="card-img-top" alt="' +
-                    movie.title +
-                    '"></a>' +
-                    '<div class="card-body">' +
-                    '<h5 class="card-title">' +
-                    movie.title +
-                    "</h5>";
-                if(movie.overview !=null) {
-                    output +=
-                        '<p style="font-size: 12px;" class="card-text">' +
-                        movie.overview +
-                        "</p>";
-                }
-                output +=
-                    "</div>" +
-                    '<div class="card-footer">' +
-                    '<small style="line-height: 1;" class="text-muted">' +
-                    results["attributionText"] +
-                    "</small>" +
-                    "</div>" +
-                    "</div>";
-
-            }
-            /*
-            const img = document.createElement('img');
-            img.src = imageUrl + movie.poster_path;
-            img.setAttribute('data-movie-id',movie.id);
-
-            section.appendChild(img);
-            */
-            /*
-            return `<img 
-                src=${imageUrl + movie.poster_path} 
-                data-movie-id=${movie.id}
-            />`;
-            */
-        }
-        output += "</div>";
-        movieSec.innerHTML = output;
-    })
-
-    //return section;
-}
 
 function createMovieContainer(movies,tittle = '') {
     const movieElement = document.createElement('div');
@@ -201,73 +172,138 @@ function homeMov(data){
             bodyTittle.setAttribute('class','card-tittle');
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
-            
-            
-            
-            /*
-            output += 
-                
-                `<div class="card">` +
-                `<a href="movie.html">` +
-                `<img src="` +
-                imageUrl + movie.poster_path +
-                `" class="card-img-top" alt="` +
-                movie.title +
-                `"></a>` +
-                `<div class="card-body">` +
-                `<h5 class="card-title">` +
-                movie.title +
-                `</h5>`;
-                
-            
-            if(movie.overview !=null) {
-                output +=
-                    `<p style="font-size: 12px;" class="card-text">` +
-                    movie.overview +
-                    `</p>`;
-            }*/
         }
         
         
         })
     
-    //output += `</div>`;
-    
-    //movieSec.innerHTML=output;
     movieSec.appendChild(header);
 }
 
-function singleMovie(data,movieId) {
-    //const movies = data.results;
-    /*
-    movieImage = imageUrl + data.poster_path;
-
-    const img = document.createElement('img');
-    img.src = movieImage;
-    img.setAttribute('class','card-img-top');
-    img.alt = data.title;
-    */
-
-    var z = document.createElement('p'); // is a node
-    z.innerHTML = 'test satu dua tiga';
-   
-    singleMovieContainer.appendChild(z);
-
+function testTest(data){
+    const tvs = data.results;
+    console.log(tvs);
 }
 
-function renderSearchSec(data) {
-    const movies = data.results;
-    movieSecSec(movies);
+function homeAct(data){
+    movieSec.innerHTML = '';
+    const actors = data.results;
+
+    const header =document.createElement('h2');
+    header.innerHTML = "Actor";
+    const cardColumn = document.createElement('div');
+    cardColumn.setAttribute('class','card-group');
+    header.appendChild(cardColumn);
+
+    const cardRow = document.createElement('div');
+    cardRow.setAttribute('class','row flex-row flex-nowrap');
+    cardColumn.appendChild(cardRow);
+    //console.log(movies);
+    //console.log(movies.length);
+    //let output = "";
+    
+    //output +=
+    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
+    
+    actors.map((actor) => {
+        if(actor.profile_path){
+            //const movie = movies[i];
+            const cardDiv = document.createElement('div');
+            cardDiv.setAttribute('class','col-2');
+            cardRow.appendChild(cardDiv);
+
+            const movieBox = document.createElement('div');
+            movieBox.setAttribute('class','card');
+            cardDiv.appendChild(movieBox);
+            
+            const moviePage = document.createElement('a');
+            moviePage.setAttribute('href',"actor.html");
+            moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('data-id',actor.id);
+            movieBox.appendChild(moviePage);
+            
+            const img = document.createElement('img');
+            img.src = imageUrl + actor.profile_path;
+            img.setAttribute('class','card-img-top clickme');
+            img.alt = actor.name;
+            moviePage.appendChild(img);
+            
+            const cardBody = document.createElement('div');
+            cardBody.setAttribute('class','card-body');
+            movieBox.appendChild(cardBody);
+            
+            const bodyTittle = document.createElement('h5');
+            bodyTittle.setAttribute('class','card-tittle');
+            bodyTittle.innerHTML = actor.name;
+            cardBody.appendChild(bodyTittle);
+        }
+        
+        
+        })
+    
+    movieSec.appendChild(header);
 }
 
-/*
-function homeMovie(data){
-    const movies = data.results;
-    movieSection = document.getElementById("movieSection");
-    console.log('Movies: ',movies);
+function homeTv(data){
+    movieSec.innerHTML = '';
+    const tvs = data.results;
+    console.log(tvs);
 
+    const header =document.createElement('h2');
+    header.innerHTML = "TV";
+    const cardColumn = document.createElement('div');
+    cardColumn.setAttribute('class','card-group');
+    header.appendChild(cardColumn);
+
+    const cardRow = document.createElement('div');
+    cardRow.setAttribute('class','row flex-row flex-nowrap');
+    cardColumn.appendChild(cardRow);
+    //console.log(movies);
+    //console.log(movies.length);
+    //let output = "";
+    
+    //output +=
+    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
+    
+    tvs.map((tv) => {
+        if(tv.poster_path){
+            //const movie = movies[i];
+            const cardDiv = document.createElement('div');
+            cardDiv.setAttribute('class','col-2');
+            cardRow.appendChild(cardDiv);
+
+            const movieBox = document.createElement('div');
+            movieBox.setAttribute('class','card');
+            cardDiv.appendChild(movieBox);
+            
+            const moviePage = document.createElement('a');
+            moviePage.setAttribute('href',"tv.html");
+            moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('data-id',tv.id);
+            movieBox.appendChild(moviePage);
+            
+            const img = document.createElement('img');
+            img.src = imageUrl + tv.poster_path;
+            img.setAttribute('class','card-img-top clickme');
+            img.alt = tv.name;
+            moviePage.appendChild(img);
+            
+            const cardBody = document.createElement('div');
+            cardBody.setAttribute('class','card-body');
+            movieBox.appendChild(cardBody);
+            
+            const bodyTittle = document.createElement('h5');
+            bodyTittle.setAttribute('class','card-tittle');
+            bodyTittle.innerHTML = tv.name;
+            cardBody.appendChild(bodyTittle);
+        }
+        
+        
+        })
+    
+    movieSec.appendChild(header);
 }
-*/
+
 
 function renderMovies(data) {
     const movies = data.results;
@@ -275,12 +311,6 @@ function renderMovies(data) {
     movieContainer.appendChild(movieBlock);
     console.log('Data: ',data);
 }
-
-function handleError() {
-    console.log("Error: ",error);
-}
-
-
 
 function newMovie(m){
     //location.replace("movie.html");
