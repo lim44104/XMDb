@@ -371,6 +371,65 @@ function creditMov(data){
     movieSec.appendChild(header);
 }
 
+function similarTv(data){
+    movieSec.innerHTML = '';
+    const movies = data.results;
+
+    const header =document.createElement('h2');
+    header.innerHTML = "Movie";
+    const cardColumn = document.createElement('div');
+    cardColumn.setAttribute('class','card-group');
+    header.appendChild(cardColumn);
+
+    const cardRow = document.createElement('div');
+    cardRow.setAttribute('class','row flex-row flex-nowrap');
+    cardColumn.appendChild(cardRow);
+    console.log(movies);
+    console.log(movies.length);
+    //let output = "";
+    
+    //output +=
+    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
+    
+    movies.map((movie) => {
+        if(movie.poster_path){
+            //const movie = movies[i];
+            const cardDiv = document.createElement('div');
+            cardDiv.setAttribute('class','col-2');
+            cardRow.appendChild(cardDiv);
+
+            const movieBox = document.createElement('div');
+            movieBox.setAttribute('class','card');
+            cardDiv.appendChild(movieBox);
+            
+            const moviePage = document.createElement('a');
+            moviePage.setAttribute('href',"movie.html");
+            moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('data-id',movie.id);
+            movieBox.appendChild(moviePage);
+            
+            const img = document.createElement('img');
+            img.src = imageUrl + movie.poster_path;
+            img.setAttribute('class','card-img-top clickme');
+            img.alt = movie.name;
+            moviePage.appendChild(img);
+            
+            const cardBody = document.createElement('div');
+            cardBody.setAttribute('class','card-body');
+            movieBox.appendChild(cardBody);
+            
+            const bodyTittle = document.createElement('h5');
+            bodyTittle.setAttribute('class','card-tittle');
+            bodyTittle.innerHTML = movie.name;
+            cardBody.appendChild(bodyTittle);
+        }
+        
+        
+        })
+    
+    movieSec.appendChild(header);
+}
+
 
 function createIframe(video) {
     const iframe = document.createElement('iframe');

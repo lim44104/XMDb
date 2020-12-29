@@ -49,7 +49,7 @@
         <div class="container single-movie-container" id="sigleMovieContainerDiv"></div>
   </div>
 
-  <h2 id="movieMainTitle">Actor</h2>
+  <h2 id="movieMainTitle">TV Show</h2>
   <div class="card flex-md-row mb-4 box-shadow h-md-250" id="movieCard">
     <div>
       <img class="card-img-right flex-auto d-md-block img-fluid" id="tvImage" alt="Picture of Tv" src="">
@@ -61,6 +61,15 @@
   </div>
 
   <div class="singletv"></div>
+
+  <h2>Trailer</h2>
+  <div id="testing"></div>
+
+  <h2>Video</h2>
+  <div id="testing2"></div>
+
+  <div id="movieSec"></div>
+
   
 
 <footer class="container foot">
@@ -76,6 +85,8 @@
 <script>
   function singletvfunction() {
     var id = sessionStorage.getItem('id');
+    getVideosTv(id)
+    getVideosTv2(id)
     const path =`/tv/${id}`;
         const url = generateUrl(path);
         fetch(url)
@@ -90,7 +101,16 @@
                 console.log('Error: ',error);
             })
   }
+
+  function similarShows() {
+    var id = sessionStorage.getItem('id');
+    const path =`/tv/${id}/similar`;
+    const url = generateUrl(path);
+    requestMovies(url, similarTv, handleError);
+}
+
   singletvfunction()
+  similarShows()
 </script>
   </body>
 </html>

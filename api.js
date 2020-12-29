@@ -104,5 +104,26 @@ function getVideosById2(movieId){
     */
 }
 
+function getVideosTv(id){
+    const url = generateUrl(`/tv/${id}/videos`);
+    //const render = createVideoTemplate(data);
+    requestMovies(url,createVideoTemplate,handleError);
+    /*
+    //movie trailer
+    const path =`/movie/${movieId}/videos`;
+    const url = generateUrl(path);
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) => createVideoTemplate(data))
+        .catch(() => {
+            console.log('Error: ',error);
+        });
+    */
+}
+
+function getVideosTv2(id){
+    const url = generateUrl(`/tv/${id}/videos`);
+    requestMovies(url,createVideo,handleError);
+}
 
 

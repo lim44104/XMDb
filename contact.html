@@ -44,7 +44,6 @@
   </nav>
 
 
-<input type="submit" class="hideb" id="search" class="btn btn-danger mb-2 float-right search-button">
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
@@ -52,18 +51,75 @@
         <div class="container single-movie-container" id="sigleMovieContainerDiv"></div>
   </div>
 
-  <h2 id="movieMainTitle">Movie</h2>
-  <div class="card flex-md-row mb-4 box-shadow h-md-250" id="movieCard">
-    <div>
-      <img class="card-img-right flex-auto d-md-block img-fluid" id="movieImage" alt="Picture of Movie" src="">
-    </div>
-    <div class="card-body d-flex flex-column align-items-start">
-      <h3 class="mb-0 text-dark" id="movieName">Movie Title</h3>
-      <p class="card-text mb-3" id="movieDescription">mmmmm</p>
-    </div>
-  </div>
+  <section id="contact" class="mb-4">
+    <div class="container">
+      <!--Section heading-->
+      <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Me</h2>
+      <!--Section description-->
+      <p class="text-center w-responsive mx-auto mb-5 cont">Do you have any questions? Please do not hesitate to contact me directly. I will come back to you within
+          a matter of hours.</p>
 
-  <div class="singlemovie"></div>
+      <div class="row justify-content-center">
+
+          <!--Grid column-->
+          <div class="col-md-9 mb-md-0 mb-5">
+              <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                  <!--Grid row-->
+                  <div class="row">
+                      <!--Grid column-->
+                      <div class="col-md-4">
+                          <div class="md-form mb-0">
+                              <label for="name" class="cont">Your name</label>
+                              <input type="text" id="name" name="name" class="form-control">
+                          </div>
+                      </div>
+                      <!--Grid column-->
+
+                      <!--Grid column-->
+                      <div class="col-md-4">
+                          <div class="md-form mb-0">
+                              <label for="email" class="cont">Your email</label>
+                              <input type="text" id="email" name="email" class="form-control">
+                          </div>
+                      </div>
+                      <!--Grid column-->
+                  </div>
+                  <!--Grid row-->
+
+                  <!--Grid row-->
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="md-form mb-0">
+                              <label for="subject" class="cont">Subject</label>
+                              <input type="text" id="subject" name="subject" class="form-control">
+                          </div>
+                      </div>
+                  </div>
+                  <!--Grid row-->
+
+                  <!--Grid row-->
+                  <div class="row">
+                      <!--Grid column-->
+                      <div class="col-md-12">
+                          <div class="md-form">
+                              <label class="cont" for="message">Your message</label>
+                              <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                          </div>
+                      </div>
+                  </div>
+                  <!--Grid row-->
+
+              </form>
+              <div class="text-center text-md-left">
+                  <p></p>
+                  <a class="btn btn-primary">Send</a>
+              </div>
+              <div class="status"></div>
+          </div>
+      </div>
+    </div>
+</section>
   
 
 <footer class="container foot">
