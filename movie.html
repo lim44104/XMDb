@@ -63,6 +63,16 @@
   </div>
 
   <div class="singlemovie"></div>
+
+  <h2>Trailer</h2>
+  <div id="testing"></div>
+
+  <h2>Video</h2>
+  <div id="testing2"></div>
+
+  <div id="movieSec"></div>
+
+  
   
 
 <footer class="container foot">
@@ -77,9 +87,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
   function singlemoviefunction() {
-    var id = sessionStorage.getItem('movie-id');
+    var id = sessionStorage.getItem('id');
+    getVideosById(id)
+    getVideosById2(id)
     const path =`/movie/${id}`;
-        const url = generateUrl(path);
+    const url = generateUrl(path);
         fetch(url)
             .then((res) => res.json())
             .then(function(res){
@@ -87,12 +99,23 @@
               movieName.innerHTML = res.title;
               movieDescription.innerHTML = res.overview;
               movieImage.src = imageUrl + res.poster_path;
+              
             })
             .catch(() => {
                 console.log('Error: ',error);
             })
+    
   }
+
+  function similarMovies() {
+    var id = sessionStorage.getItem('id');
+    const path =`/movie/${id}/similar`;
+    const url = generateUrl(path);
+    requestMovies(url, homeMov, handleError);
+}
   singlemoviefunction()
+  similarMovies()
+  
 </script>
   </body>
 </html>

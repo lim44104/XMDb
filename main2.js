@@ -312,18 +312,69 @@ function renderMovies(data) {
     console.log('Data: ',data);
 }
 
-function newMovie(m){
-    //location.replace("movie.html");
-    console.log(m);
-    console.log(m.title);
+function creditMov(data){
+    movieSec.innerHTML = '';
+    const movies = data.cast;
+
+    const header =document.createElement('h2');
+    header.innerHTML = "Movie";
+    const cardColumn = document.createElement('div');
+    cardColumn.setAttribute('class','card-group');
+    header.appendChild(cardColumn);
+
+    const cardRow = document.createElement('div');
+    cardRow.setAttribute('class','row flex-row flex-nowrap');
+    cardColumn.appendChild(cardRow);
+    console.log(movies);
+    console.log(movies.length);
+    //let output = "";
     
-    //movieName.innerHTML = m.title;
+    //output +=
+    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
+    
+    movies.map((movie) => {
+        if(movie.poster_path){
+            //const movie = movies[i];
+            const cardDiv = document.createElement('div');
+            cardDiv.setAttribute('class','col-2');
+            cardRow.appendChild(cardDiv);
+
+            const movieBox = document.createElement('div');
+            movieBox.setAttribute('class','card');
+            cardDiv.appendChild(movieBox);
+            
+            const moviePage = document.createElement('a');
+            moviePage.setAttribute('href',"movie.html");
+            moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('data-id',movie.id);
+            movieBox.appendChild(moviePage);
+            
+            const img = document.createElement('img');
+            img.src = imageUrl + movie.poster_path;
+            img.setAttribute('class','card-img-top clickme');
+            img.alt = movie.title;
+            moviePage.appendChild(img);
+            
+            const cardBody = document.createElement('div');
+            cardBody.setAttribute('class','card-body');
+            movieBox.appendChild(cardBody);
+            
+            const bodyTittle = document.createElement('h5');
+            bodyTittle.setAttribute('class','card-tittle');
+            bodyTittle.innerHTML = movie.title;
+            cardBody.appendChild(bodyTittle);
+        }
+        
+        
+        })
+    
+    movieSec.appendChild(header);
 }
 
 
-/*
 function createIframe(video) {
     const iframe = document.createElement('iframe');
+    iframe.setAttribute('class','col-3');
     iframe.src = `https://www.youtube.com/embed/${video.key}`;
     iframe.width = 360;
     iframe.height = 315;
@@ -331,9 +382,9 @@ function createIframe(video) {
 
     return iframe;
 }
-*/
 
-/*
+
+
 function createVideoTemplate(data) {
     //const content = this.content;
     //document.getElementById("testing").innerHTML = '<div id="testing"></div>'
@@ -343,13 +394,37 @@ function createVideoTemplate(data) {
     const length = videos.length > 1 ? 1 : videos.length;
     const iframeContainer = document.createElement('div');
 
+
     for (let i = 0; i < length; i++){
         const video = videos[i];//video
         const iframe = createIframe(video);
         iframeContainer.appendChild(iframe);
         document.getElementById("testing").appendChild(iframeContainer);
     }
-*/
+}
+
+function createVideo(data) {
+    //const content = this.content;
+    //document.getElementById("testing").innerHTML = '<div id="testing"></div>'
+    //console.log("Videos: ",data);
+    //content.innerHTML = '<p id="content-close">X</p>';
+    const videos = data.results;
+    const length = videos.length > 10 ? 10 : videos.length;
+    const iframeContainer = document.createElement('div');
+    iframeContainer.setAttribute('class','card-group');
+
+    const iframeRow = document.createElement('div');
+    iframeRow.setAttribute('class','row flex-row flex-nowrap');
+    iframeContainer.appendChild(iframeRow);
+
+
+    for (let i = 0; i < length; i++){
+        const video = videos[i];//video
+        const iframe = createIframe(video);
+        iframeRow.appendChild(iframe);
+        document.getElementById("testing2").appendChild(iframeContainer);
+    }
+}
 
 //Event Delegation
 document.onclick = function(event) {
@@ -406,6 +481,6 @@ document.onclick = function(event) {
 
     $(document).on('click','.clickToGetId',function(){
         id = $(this).attr('data-id');
-        sessionStorage.setItem('movie-id',id);
+        sessionStorage.setItem('id',id);
     })
 }

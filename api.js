@@ -72,8 +72,8 @@ function getPopularMovies() {
 
 function getVideosById(movieId){
     const url = generateUrl(`/movie/${movieId}/videos`);
-    const render = createVideoTemplate(data);
-    requestMovies(url,render,handleError);
+    //const render = createVideoTemplate(data);
+    requestMovies(url,createVideoTemplate,handleError);
     /*
     //movie trailer
     const path =`/movie/${movieId}/videos`;
@@ -87,9 +87,22 @@ function getVideosById(movieId){
     */
 }
 
-function singMovie(value) {
-    const path = '/search/movie';
-    const url = generateUrl(path) + '&query=' + value;
-
-    requestMovies(url, renderSearchSec, handleError);
+function getVideosById2(movieId){
+    const url = generateUrl(`/movie/${movieId}/videos`);
+    //const render = createVideoTemplate(data);
+    requestMovies(url,createVideo,handleError);
+    /*
+    //movie trailer
+    const path =`/movie/${movieId}/videos`;
+    const url = generateUrl(path);
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) => createVideoTemplate(data))
+        .catch(() => {
+            console.log('Error: ',error);
+        });
+    */
 }
+
+
+

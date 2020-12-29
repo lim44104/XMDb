@@ -61,6 +61,8 @@
   </div>
 
   <div class="singleactor"></div>
+
+  <div id="movieSec"></div>
   
 
 <footer class="container foot">
@@ -75,7 +77,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
   function singleactorfunction() {
-    var id = sessionStorage.getItem('movie-id');
+    var id = sessionStorage.getItem('id');
     const path =`/person/${id}`;
         const url = generateUrl(path);
         fetch(url)
@@ -90,7 +92,34 @@
                 console.log('Error: ',error);
             })
   }
+  
+  function movieCredit() {
+    var id = sessionStorage.getItem('id');
+    const path =`/person/${id}/movie_credits`;
+        const url = generateUrl(path);
+        fetch(url)
+            .then((res) => res.json())
+            .then(function(res){
+              console.log(res);
+              
+            })
+            .catch(() => {
+                console.log('Error: ',error);
+            })
+}
+
+
+function movieCredit2() {
+    var id = sessionStorage.getItem('id');
+    const path =`/person/${id}/movie_credits`;
+    const url = generateUrl(path);
+    requestMovies(url, creditMov, handleError);
+}
+
+    
   singleactorfunction()
+  movieCredit()
+  movieCredit2()
 </script>
   </body>
 </html>
