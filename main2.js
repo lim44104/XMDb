@@ -1,5 +1,3 @@
-
-
 //select elements from the DOM
 const buttonElement = document.querySelector('#search');
 const inputElement = document.querySelector('#inputValue');
@@ -56,6 +54,10 @@ function movieSection(movies) {
             const cardBody = document.createElement('div');
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
+
+            const rating = document.createElement('h5');
+            rating.innerHTML = movie.vote_average;
+            cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h5');
             bodyTittle.setAttribute('class','card-tittle');
@@ -481,6 +483,10 @@ function homeTv(data){
             const cardBody = document.createElement('div');
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
+
+            const rating = document.createElement('h5');
+            rating.innerHTML = tv.vote_average;
+            cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h5');
             bodyTittle.setAttribute('class','card-tittle');
@@ -541,6 +547,10 @@ function trendTv(data){
             const cardBody = document.createElement('div');
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
+
+            const rating = document.createElement('h5');
+            rating.innerHTML = tv.vote_average;
+            cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h5');
             bodyTittle.setAttribute('class','card-tittle');
@@ -608,6 +618,10 @@ function creditMov(data){
             const cardBody = document.createElement('div');
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
+
+            const rating = document.createElement('h5');
+            rating.innerHTML = movie.vote_average;
+            cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h5');
             bodyTittle.setAttribute('class','card-tittle');
@@ -667,6 +681,10 @@ function similarTv(data){
             const cardBody = document.createElement('div');
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
+            
+            const rating = document.createElement('h5');
+            rating.innerHTML = movie.vote_average;
+            cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h5');
             bodyTittle.setAttribute('class','card-tittle');
