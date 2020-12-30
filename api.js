@@ -33,6 +33,17 @@ function searchMovie2(value) {
     requestMovies(url, homeMov, handleError);
 }
 
+function printRes(data){
+    console.log(data);
+}
+
+function movieTrend() {
+    const path = '/trending/movie/week';
+    const url = generateUrl(path);
+    
+    requestMovies(url, homeMov, handleError);
+}
+
 function searchActor(value) {
     const path = '/search/person';
     const url = generateUrl(path) + '&query=' + value;
@@ -44,6 +55,13 @@ function searchTv(value) {
     const path = '/search/tv';
     const url = generateUrl(path) + '&query=' + value;
 
+    requestMovies(url, homeTv, handleError);
+}
+
+function tvTrend() {
+    const path = '/trending/tv/week';
+    const url = generateUrl(path);
+    
     requestMovies(url, homeTv, handleError);
 }
 

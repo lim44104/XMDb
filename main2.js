@@ -6,6 +6,7 @@ const inputElement = document.querySelector('#inputValue');
 const movieSearchable = document.querySelector('#movie-searchable');
 const movieContainer = document.querySelector('#movie-container');
 const movieSec = document.getElementById("movieSec");
+const trendSec = document.getElementById("trendSec");
 const singleMovieContainer = document.getElementById("sigleMovieContainerDiv");
 const movieName = document.getElementById("movieName");
 const movieDescription = document.getElementById("movieDescription");
