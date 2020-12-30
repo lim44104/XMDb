@@ -30,7 +30,6 @@ function movieSection(movies) {
 
     movies.map((movie) => {
         if (movie.poster_path){
-            
             const cardDiv = document.createElement('div');
             cardDiv.setAttribute('class','col-2');
             cardRow.appendChild(cardDiv);
@@ -63,21 +62,10 @@ function movieSection(movies) {
             bodyTittle.setAttribute('class','card-tittle');
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
-            
-            
-            /*
-            return `<img 
-                src=${imageUrl + movie.poster_path} 
-                data-movie-id=${movie.id}
-            />`;
-            */
-            
         }
     })
     return section;
 }
-
-
 
 function createMovieContainer(movies,tittle = '') {
     const movieElement = document.createElement('div');
@@ -85,32 +73,11 @@ function createMovieContainer(movies,tittle = '') {
 
     const header =document.createElement('h2');
     header.innerHTML = tittle;
-
-    /*
-    const content = document.createElement('div');
-    content.classList = 'content';
-    const contentClose = `<p id="content-close">X</p>`
-
-    content.innerHTML = contentClose;
-    */
     const section = movieSection(movies);
 
-    /*
-    const movieTemplate = `
-        <h2>${tittle}</h2>
-        <section class="section" id="movieSec">
-            ${movieSection(movies)}
-        <section>`
-        +
-        `<div class="content">
-            <p id="content-close">X</p>
-        <div>`;
-    */
-
-    //movieElement.innerHTML = movieTemplate;
     movieElement.appendChild(header);
     movieElement.appendChild(section);
-    //movieElement.appendChild(content);
+
     return movieElement;
 }
 
@@ -137,13 +104,7 @@ function homeMov(data){
     const cardRow = document.createElement('div');
     cardRow.setAttribute('class','row flex-row flex-nowrap');
     cardColumn.appendChild(cardRow);
-    console.log(movies);
-    console.log(movies.length);
-    //let output = "";
-    
-    //output +=
-    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
-    
+
     movies.map((movie) => {
         if(movie.poster_path){
             //const movie = movies[i];
@@ -202,14 +163,9 @@ function similarMov(data){
     cardColumn.appendChild(cardRow);
     console.log(movies);
     console.log(movies.length);
-    //let output = "";
-    
-    //output +=
-    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
-    
+
     movies.map((movie) => {
         if(movie.poster_path){
-            //const movie = movies[i];
             const cardDiv = document.createElement('div');
             cardDiv.setAttribute('class','col-2');
             cardRow.appendChild(cardDiv);
@@ -265,14 +221,9 @@ function trendMov(data){
     cardColumn.appendChild(cardRow);
     console.log(movies);
     console.log(movies.length);
-    //let output = "";
-    
-    //output +=
-    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
-    
+
     movies.map((movie) => {
         if(movie.poster_path){
-            //const movie = movies[i];
             const cardDiv = document.createElement('div');
             cardDiv.setAttribute('class','col-2');
             cardRow.appendChild(cardDiv);
@@ -313,11 +264,6 @@ function trendMov(data){
     movieSec.appendChild(header);
 }
 
-function testTest(data){
-    const tvs = data.results;
-    console.log(tvs);
-}
-
 function homeAct(data){
     movieSec.innerHTML = '';
     const actors = data.results;
@@ -331,16 +277,9 @@ function homeAct(data){
     const cardRow = document.createElement('div');
     cardRow.setAttribute('class','row flex-row flex-nowrap');
     cardColumn.appendChild(cardRow);
-    //console.log(movies);
-    //console.log(movies.length);
-    //let output = "";
-    
-    //output +=
-    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
-    
+
     actors.map((actor) => {
         if(actor.profile_path){
-            //const movie = movies[i];
             const cardDiv = document.createElement('div');
             cardDiv.setAttribute('class','col-2');
             cardRow.appendChild(cardDiv);
@@ -390,16 +329,9 @@ function trendAct(data){
     const cardRow = document.createElement('div');
     cardRow.setAttribute('class','row flex-row flex-nowrap');
     cardColumn.appendChild(cardRow);
-    //console.log(movies);
-    //console.log(movies.length);
-    //let output = "";
-    
-    //output +=
-    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
     
     actors.map((actor) => {
         if(actor.profile_path){
-            //const movie = movies[i];
             const cardDiv = document.createElement('div');
             cardDiv.setAttribute('class','col-2');
             cardRow.appendChild(cardDiv);
@@ -450,16 +382,9 @@ function homeTv(data){
     const cardRow = document.createElement('div');
     cardRow.setAttribute('class','row flex-row flex-nowrap');
     cardColumn.appendChild(cardRow);
-    //console.log(movies);
-    //console.log(movies.length);
-    //let output = "";
-    
-    //output +=
-    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
     
     tvs.map((tv) => {
         if(tv.poster_path){
-            //const movie = movies[i];
             const cardDiv = document.createElement('div');
             cardDiv.setAttribute('class','col-2');
             cardRow.appendChild(cardDiv);
@@ -514,16 +439,9 @@ function trendTv(data){
     const cardRow = document.createElement('div');
     cardRow.setAttribute('class','row flex-row flex-nowrap');
     cardColumn.appendChild(cardRow);
-    //console.log(movies);
-    //console.log(movies.length);
-    //let output = "";
-    
-    //output +=
-    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
     
     tvs.map((tv) => {
         if(tv.poster_path){
-            //const movie = movies[i];
             const cardDiv = document.createElement('div');
             cardDiv.setAttribute('class','col-2');
             cardRow.appendChild(cardDiv);
@@ -587,14 +505,9 @@ function creditMov(data){
     cardColumn.appendChild(cardRow);
     console.log(movies);
     console.log(movies.length);
-    //let output = "";
-    
-    //output +=
-    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
     
     movies.map((movie) => {
         if(movie.poster_path){
-            //const movie = movies[i];
             const cardDiv = document.createElement('div');
             cardDiv.setAttribute('class','col-2');
             cardRow.appendChild(cardDiv);
@@ -650,14 +563,9 @@ function similarTv(data){
     cardColumn.appendChild(cardRow);
     console.log(movies);
     console.log(movies.length);
-    //let output = "";
-    
-    //output +=
-    //    `<h2 id="movieMainTitle">Movie</h2>` + `<div class="card-columns">`;
     
     movies.map((movie) => {
         if(movie.poster_path){
-            //const movie = movies[i];
             const cardDiv = document.createElement('div');
             cardDiv.setAttribute('class','col-2');
             cardRow.appendChild(cardDiv);
@@ -710,13 +618,7 @@ function createIframe(video) {
     return iframe;
 }
 
-
-
 function createVideoTemplate(data) {
-    //const content = this.content;
-    //document.getElementById("testing").innerHTML = '<div id="testing"></div>'
-    console.log("Videos: ",data);
-    //content.innerHTML = '<p id="content-close">X</p>';
     const videos = data.results;
     const length = videos.length > 1 ? 1 : videos.length;
     const iframeContainer = document.createElement('div');
@@ -731,10 +633,6 @@ function createVideoTemplate(data) {
 }
 
 function createVideo(data) {
-    //const content = this.content;
-    //document.getElementById("testing").innerHTML = '<div id="testing"></div>'
-    //console.log("Videos: ",data);
-    //content.innerHTML = '<p id="content-close">X</p>';
     const videos = data.results;
     const length = videos.length > 10 ? 10 : videos.length;
     const iframeContainer = document.createElement('div');
@@ -743,7 +641,6 @@ function createVideo(data) {
     const iframeRow = document.createElement('div');
     iframeRow.setAttribute('class','row flex-row flex-nowrap');
     iframeContainer.appendChild(iframeRow);
-
 
     for (let i = 0; i < length; i++){
         const video = videos[i];//video
@@ -755,57 +652,7 @@ function createVideo(data) {
 
 //Event Delegation
 document.onclick = function(event) {
-    
     const target = event.target;
-    //event.preventDefault();
-    /*
-    if (target.tagName.toLowerCase() === 'img'){
-    //if(target.classList.contains(clickme)){
-        //console.log('works!');
-        const movieId = target.dataset.movieId;
-        //console.log(target);
-        //console.log(target.dataset);
-        //console.log(target.dataset);
-        //console.log(movieId);
-
-        const path =`/movie/${movieId}`;
-        const url = generateUrl(path);
-        fetch(url)
-            .then((res) => res.json())
-            .then(newMovie)
-            .catch(() => {
-                console.log('Error: ',error);
-            })
-
-        
-
-        //const section = target.parentElement; //section
-        //const content = section.nextElementSibling; //content
-        //content.classList.add('content-display');
-
-        /*
-        //movie trailer
-        const path =`/movie/${movieId}/videos`;
-        const url = generateUrl(path);
-        fetch(url)
-            .then((res) => res.json())
-            .then((data) => createVideoTemplate(data))
-            .catch(() => {
-                console.log('Error: ',error);
-            });
-        */
-
-    //}
-    
-
-    //not works!!
-    /*
-    if (target.id === 'content-close'){
-        const content = target.parentElement;
-        content.classList.remove('content-display');
-    }
-    */
-
     $(document).on('click','.clickToGetId',function(){
         id = $(this).attr('data-id');
         sessionStorage.setItem('id',id);
