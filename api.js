@@ -51,6 +51,13 @@ function searchActor(value) {
     requestMovies(url, homeAct, handleError);
 }
 
+function latestActor() {
+    const path = '/person/popular';
+    const url = generateUrl(path);
+
+    requestMovies(url, homeAct, handleError);
+}
+
 function searchTv(value) {
     const path = '/search/tv';
     const url = generateUrl(path) + '&query=' + value;
