@@ -41,7 +41,7 @@ function movieTrend() {
     const path = '/trending/movie/week';
     const url = generateUrl(path);
     
-    requestMovies(url, homeMov, handleError);
+    requestMovies(url, trendMov, handleError);
 }
 
 function searchActor(value) {
@@ -55,7 +55,7 @@ function latestActor() {
     const path = '/person/popular';
     const url = generateUrl(path);
 
-    requestMovies(url, homeAct, handleError);
+    requestMovies(url, trendAct, handleError);
 }
 
 function searchTv(value) {
@@ -69,7 +69,7 @@ function tvTrend() {
     const path = '/trending/tv/week';
     const url = generateUrl(path);
     
-    requestMovies(url, homeTv, handleError);
+    requestMovies(url, trendTv, handleError);
 }
 
 function getUpcomingMovies() {
@@ -93,6 +93,12 @@ function getPopularMovies() {
     requestMovies(url, render, handleError);
 }
 
+function nowPlayingMovies() {
+    const path = '/movie/now_playing';
+    const url = generateUrl(path);
+    const render = renderMovies.bind({tittle: 'Now Playing Movies'});
+    requestMovies(url, render, handleError);
+}
 
 
 function getVideosById(movieId){

@@ -111,7 +111,7 @@
     var id = sessionStorage.getItem('id');
     const path =`/movie/${id}/similar`;
     const url = generateUrl(path);
-    requestMovies(url, homeMov, handleError);
+    requestMovies(url, similarMov, handleError);
 }
   singlemoviefunction()
   similarMovies()
