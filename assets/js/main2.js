@@ -591,7 +591,8 @@ function creditMov(data){
 
 function similarTv(data){
     movieSec.innerHTML = '';
-    const movies = data.results;
+    const tvs = data.results;
+    console.log(tvs);
 
     const header =document.createElement('h2');
     header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
@@ -604,11 +605,9 @@ function similarTv(data){
     const cardRow = document.createElement('div');
     cardRow.setAttribute('class','row flex-row flex-nowrap');
     cardColumn.appendChild(cardRow);
-    console.log(movies);
-    console.log(movies.length);
     
-    movies.map((movie) => {
-        if(movie.poster_path){
+    tvs.map((tv) => {
+        if(tv.poster_path){
             const cardDiv = document.createElement('div');
             cardDiv.setAttribute('class','col-lg-2 col-md-4 col-sm-6 col-6');
             cardRow.appendChild(cardDiv);
@@ -618,31 +617,31 @@ function similarTv(data){
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
-            moviePage.setAttribute('href',"movie.html");
+            moviePage.setAttribute('href',"tv.html");
             moviePage.setAttribute('class','clickToGetId');
             moviePage.setAttribute('target','_blank');
-            moviePage.setAttribute('data-id',movie.id);
+            moviePage.setAttribute('data-id',tv.id);
             movieBox.appendChild(moviePage);
             
             const img = document.createElement('img');
-            img.src = imageUrl + movie.poster_path;
+            img.src = imageUrl + tv.poster_path;
             img.setAttribute('class','card-img-top clickme');
-            img.alt = movie.name;
+            img.alt = tv.name;
             moviePage.appendChild(img);
             
             const cardBody = document.createElement('div');
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
-            
+
             const rating = document.createElement('h6');
             rating.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0085ca" class="bi bi-star-fill" viewBox="0 0 16 16">
             <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-          </svg>`+" "+ movie.vote_average;
+          </svg>`+" "+ tv.vote_average;
             cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h6');
             bodyTittle.setAttribute('class','card-tittle');
-            bodyTittle.innerHTML = movie.name;
+            bodyTittle.innerHTML = tv.name;
             cardBody.appendChild(bodyTittle);
         }
         
@@ -664,6 +663,17 @@ function createIframe(video) {
     return iframe;
 }
 
+function createIframe2(video) {
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('class','col');
+    iframe.src = `https://www.youtube.com/embed/${video.key}`;
+    iframe.width = 300;
+    iframe.height = 500;
+    iframe.allowFullscreen = true;
+
+    return iframe;
+}
+
 function createVideoTemplate(data) {
     const videos = data.results;
     const length = videos.length > 1 ? 1 : videos.length;
@@ -672,7 +682,7 @@ function createVideoTemplate(data) {
 
     for (let i = 0; i < length; i++){
         const video = videos[i];//video
-        const iframe = createIframe(video);
+        const iframe = createIframe2(video);
         iframeContainer.appendChild(iframe);
         document.getElementById("testing").appendChild(iframeContainer);
     }

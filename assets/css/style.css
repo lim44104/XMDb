@@ -220,6 +220,18 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
+  .trailersec{
+    margin-top: 50px;
+  }
+
+  .videosec{
+    margin-top: 50px;
+  }
+
+  #movieSec{
+    margin-top: 50px;
+  }
   
   
 
