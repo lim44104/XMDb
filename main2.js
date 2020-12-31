@@ -31,16 +31,17 @@ function movieSection(movies) {
     movies.map((movie) => {
         if (movie.poster_path){
             const cardDiv = document.createElement('div');
-            cardDiv.setAttribute('class','col-2');
+            cardDiv.setAttribute('class','col-lg-2 col-md-4 col-sm-6 col-6');
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card');
+            movieBox.setAttribute('class','card h-100 text-white bg-dark');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"movie.html");
             moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',movie.id);
             movieBox.appendChild(moviePage);
             
@@ -54,11 +55,11 @@ function movieSection(movies) {
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
 
-            const rating = document.createElement('h5');
+            const rating = document.createElement('h6');
             rating.innerHTML = movie.vote_average;
             cardBody.appendChild(rating);
             
-            const bodyTittle = document.createElement('h5');
+            const bodyTittle = document.createElement('h6');
             bodyTittle.setAttribute('class','card-tittle');
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
@@ -109,15 +110,16 @@ function homeMov(data){
         if(movie.poster_path){
             //const movie = movies[i];
             const cardDiv = document.createElement('div');
-            cardDiv.setAttribute('class','col-2');
+            cardDiv.setAttribute('class','col-lg-2 col-md-4 col-sm-6 col-6');
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card');
+            movieBox.setAttribute('class','card h-100 text-white bg-dark');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"movie.html");
+            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('class','clickToGetId');
             moviePage.setAttribute('data-id',movie.id);
             movieBox.appendChild(moviePage);
@@ -132,11 +134,11 @@ function homeMov(data){
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
 
-            const rating = document.createElement('h5');
+            const rating = document.createElement('h6');
             rating.innerHTML = movie.vote_average;
             cardBody.appendChild(rating);
             
-            const bodyTittle = document.createElement('h5');
+            const bodyTittle = document.createElement('h6');
             bodyTittle.setAttribute('class','card-tittle');
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
@@ -167,16 +169,17 @@ function similarMov(data){
     movies.map((movie) => {
         if(movie.poster_path){
             const cardDiv = document.createElement('div');
-            cardDiv.setAttribute('class','col-2');
+            cardDiv.setAttribute('class','col-lg-2 col-md-4 col-sm-6 col-6');
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card');
+            movieBox.setAttribute('class','card h-100 text-white bg-dark');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"movie.html");
             moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',movie.id);
             movieBox.appendChild(moviePage);
             
@@ -190,11 +193,11 @@ function similarMov(data){
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
 
-            const rating = document.createElement('h5');
+            const rating = document.createElement('h6');
             rating.innerHTML = movie.vote_average;
             cardBody.appendChild(rating);
             
-            const bodyTittle = document.createElement('h5');
+            const bodyTittle = document.createElement('h6');
             bodyTittle.setAttribute('class','card-tittle');
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
@@ -225,16 +228,17 @@ function trendMov(data){
     movies.map((movie) => {
         if(movie.poster_path){
             const cardDiv = document.createElement('div');
-            cardDiv.setAttribute('class','col-2');
+            cardDiv.setAttribute('class','col-lg-2 col-md-4 col-sm-6 col-6');
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card');
+            movieBox.setAttribute('class','card h-100 text-white bg-dark');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"movie.html");
             moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',movie.id);
             movieBox.appendChild(moviePage);
             
@@ -248,11 +252,11 @@ function trendMov(data){
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
 
-            const rating = document.createElement('h5');
+            const rating = document.createElement('h6');
             rating.innerHTML = movie.vote_average;
             cardBody.appendChild(rating);
             
-            const bodyTittle = document.createElement('h5');
+            const bodyTittle = document.createElement('h6');
             bodyTittle.setAttribute('class','card-tittle');
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
@@ -281,16 +285,17 @@ function homeAct(data){
     actors.map((actor) => {
         if(actor.profile_path){
             const cardDiv = document.createElement('div');
-            cardDiv.setAttribute('class','col-2');
+            cardDiv.setAttribute('class','col-lg-2 col-md-4 col-sm-6 col-6');
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card');
+            movieBox.setAttribute('class','card h-100 text-white bg-dark');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"actor.html");
             moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',actor.id);
             movieBox.appendChild(moviePage);
             
@@ -304,7 +309,7 @@ function homeAct(data){
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
             
-            const bodyTittle = document.createElement('h5');
+            const bodyTittle = document.createElement('h6');
             bodyTittle.setAttribute('class','card-tittle');
             bodyTittle.innerHTML = actor.name;
             cardBody.appendChild(bodyTittle);
@@ -333,16 +338,17 @@ function trendAct(data){
     actors.map((actor) => {
         if(actor.profile_path){
             const cardDiv = document.createElement('div');
-            cardDiv.setAttribute('class','col-2');
+            cardDiv.setAttribute('class','col-lg-2 col-md-4 col-sm-6 col-6');
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card');
+            movieBox.setAttribute('class','card h-100 text-white bg-dark');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"actor.html");
             moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',actor.id);
             movieBox.appendChild(moviePage);
             
@@ -356,7 +362,7 @@ function trendAct(data){
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
             
-            const bodyTittle = document.createElement('h5');
+            const bodyTittle = document.createElement('h6');
             bodyTittle.setAttribute('class','card-tittle');
             bodyTittle.innerHTML = actor.name;
             cardBody.appendChild(bodyTittle);
@@ -386,16 +392,17 @@ function homeTv(data){
     tvs.map((tv) => {
         if(tv.poster_path){
             const cardDiv = document.createElement('div');
-            cardDiv.setAttribute('class','col-2');
+            cardDiv.setAttribute('class','col-lg-2 col-md-4 col-sm-6 col-6');
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card');
+            movieBox.setAttribute('class','card h-100 text-white bg-dark');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"tv.html");
             moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',tv.id);
             movieBox.appendChild(moviePage);
             
@@ -409,11 +416,11 @@ function homeTv(data){
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
 
-            const rating = document.createElement('h5');
+            const rating = document.createElement('h6');
             rating.innerHTML = tv.vote_average;
             cardBody.appendChild(rating);
             
-            const bodyTittle = document.createElement('h5');
+            const bodyTittle = document.createElement('h6');
             bodyTittle.setAttribute('class','card-tittle');
             bodyTittle.innerHTML = tv.name;
             cardBody.appendChild(bodyTittle);
@@ -443,16 +450,17 @@ function trendTv(data){
     tvs.map((tv) => {
         if(tv.poster_path){
             const cardDiv = document.createElement('div');
-            cardDiv.setAttribute('class','col-2');
+            cardDiv.setAttribute('class','col-lg-2 col-md-4 col-sm-6 col-6');
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card');
+            movieBox.setAttribute('class','card h-100 text-white bg-dark');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"tv.html");
             moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',tv.id);
             movieBox.appendChild(moviePage);
             
@@ -466,11 +474,11 @@ function trendTv(data){
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
 
-            const rating = document.createElement('h5');
+            const rating = document.createElement('h6');
             rating.innerHTML = tv.vote_average;
             cardBody.appendChild(rating);
             
-            const bodyTittle = document.createElement('h5');
+            const bodyTittle = document.createElement('h6');
             bodyTittle.setAttribute('class','card-tittle');
             bodyTittle.innerHTML = tv.name;
             cardBody.appendChild(bodyTittle);
@@ -509,16 +517,17 @@ function creditMov(data){
     movies.map((movie) => {
         if(movie.poster_path){
             const cardDiv = document.createElement('div');
-            cardDiv.setAttribute('class','col-2');
+            cardDiv.setAttribute('class','col-lg-2 col-md-4 col-sm-6 col-6');
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card');
+            movieBox.setAttribute('class','card h-100 text-white bg-dark');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"movie.html");
             moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',movie.id);
             movieBox.appendChild(moviePage);
             
@@ -532,11 +541,11 @@ function creditMov(data){
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
 
-            const rating = document.createElement('h5');
+            const rating = document.createElement('h6');
             rating.innerHTML = movie.vote_average;
             cardBody.appendChild(rating);
             
-            const bodyTittle = document.createElement('h5');
+            const bodyTittle = document.createElement('h6');
             bodyTittle.setAttribute('class','card-tittle');
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
@@ -567,16 +576,17 @@ function similarTv(data){
     movies.map((movie) => {
         if(movie.poster_path){
             const cardDiv = document.createElement('div');
-            cardDiv.setAttribute('class','col-2');
+            cardDiv.setAttribute('class','col-lg-2 col-md-4 col-sm-6 col-6');
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card');
+            movieBox.setAttribute('class','card h-100 text-white bg-dark');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"movie.html");
             moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',movie.id);
             movieBox.appendChild(moviePage);
             
@@ -590,11 +600,11 @@ function similarTv(data){
             cardBody.setAttribute('class','card-body');
             movieBox.appendChild(cardBody);
             
-            const rating = document.createElement('h5');
+            const rating = document.createElement('h6');
             rating.innerHTML = movie.vote_average;
             cardBody.appendChild(rating);
             
-            const bodyTittle = document.createElement('h5');
+            const bodyTittle = document.createElement('h6');
             bodyTittle.setAttribute('class','card-tittle');
             bodyTittle.innerHTML = movie.name;
             cardBody.appendChild(bodyTittle);

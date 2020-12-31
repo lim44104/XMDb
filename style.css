@@ -150,9 +150,6 @@
   h2{
     color: white;
   }
-  h5{
-    color: black;
-  }
 
   .row{
     
@@ -169,6 +166,12 @@
   .cont{
     color:white;
   }
+
+  .clickme{
+    height: 320px;
+  }
+
+  
   
 
 
