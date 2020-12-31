@@ -1,0 +1,194 @@
+  /* Move down content because we have a fixed navbar that is 3.5rem tall */
+  body {
+      padding-top: 3.5rem;
+      background-color:black; /*set background color to black*/
+      padding: 40px;
+    }
+
+  h1{
+    color: white;
+    margin-bottom: 30px;
+  }
+
+  .navbar a{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    float: left;
+    font-size: 17px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: dashed;
+    letter-spacing: 1px;
+}
+
+.navbar a:hover{
+  background-color:#0085CA ;
+}
+
+  
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  /*
+  a:link,
+  a:visited{
+    color: orangered;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+  
+  a:hover,
+  a:active{
+    color: white;
+    background-color:orangered;
+    box-shadow: 0 1rem 2rem rgba(black,0.4);
+    transform: rotate(5deg) scale(1.2);
+    padding: 2px;
+  }
+
+  */
+  
+  .jumbotron{
+    background-color: black;
+  }
+  
+  .maintitle{
+    color: white;
+  }
+  
+  .introduction{
+    color: white;
+  }
+  
+  .foot{
+    color: white;
+  }
+  
+  
+  .search-box, .search-button{
+    border-radius: 0;
+  }
+  
+  
+  .search-button{
+    background-color: orangered;
+  }
+  
+  /*
+  #characterTitle, #comicTitle{
+    color:white;
+  }
+
+  */
+
+
+  .cardsec{
+    display: flex;
+    width: 100%;
+    overflow-y:hidden;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/*
+  .card:hover {
+      margin-left: 0 40px;
+      transform: scale(1.2);
+      cursor: pointer;
+      transition: 250ms all;
+  }
+*/
+
+  .content {
+    display: none;
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding: 20px;
+  }
+
+  .content div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .content-display{
+      display: none;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+  }
+
+  #content-close {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    padding: 10px;
+    /* width: 35px;; */
+    border: 1px solid lightgrey;
+    border-radius: 45%;
+    left: 20px;
+  }
+
+  #movie-searchable{
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .movie{
+    margin-bottom: 50px;
+  }
+  
+  .card{
+    border: none;
+    border-radius: 2px;
+    margin-top: 20px;
+  }
+  h2{
+    color: white;
+  }
+
+  .row{
+    
+    width: 100%;
+    overflow-y:hidden;
+    
+  }
+
+  
+  .hideb{
+    display: none;
+  }
+
+  .cont{
+    color:white;
+  }
+
+  .clickme{
+    height: 320px;
+  }
+
+  
+  
+
+
+  
+  

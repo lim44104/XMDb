@@ -11,37 +11,39 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>XMDB - Search Movie</title>
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
   </head>
 
   <body onload="movieTrend()">
       
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navnav">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="searchmovie.html">Movie</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="searchactor.html">Celeb</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="searchtv.html">TV Show</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-        </ul>
-    </div>
-    </nav>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navnav" style="background-color: #222222;">
+        <a class="navbar-brand" href="index.html">
+            <img class="cover" src="images/logo.png" alt="logo" style="width:80px;height:20px"> 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a href="index.html" target="_blank">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="searchmovie.html" target="_blank">Movie</a>
+            </li>
+            <li class="nav-item">
+                <a href="searchactor.html" target="_blank">Celeb</a>
+            </li>
+            <li class="nav-item">
+                <a href="searchtv.html" target="_blank">TV Show</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html" target="_blank">Contact</a>
+            </li>
+            </ul>
+        </div>
+        </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
 
@@ -70,8 +72,8 @@
     <p>&copy; Company 2017-2020</p>
     </footer>
 
-    <script src="api.js"></script>
-    <script src="main2.js"></script>
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/main2.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
