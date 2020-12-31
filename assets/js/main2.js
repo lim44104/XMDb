@@ -35,7 +35,7 @@ function movieSection(movies) {
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card h-100 text-white bg-dark');
+            movieBox.setAttribute('class','card h-100 text-white');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
@@ -56,7 +56,9 @@ function movieSection(movies) {
             movieBox.appendChild(cardBody);
 
             const rating = document.createElement('h6');
-            rating.innerHTML = movie.vote_average;
+            rating.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0085ca" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>`+" "+ movie.vote_average;
             cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h6');
@@ -73,7 +75,7 @@ function createMovieContainer(movies,tittle = '') {
     movieElement.setAttribute('class','movie');
 
     const header =document.createElement('h2');
-    header.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+    header.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
     <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
   </svg>`+" "+ tittle;
     const section = movieSection(movies);
@@ -99,7 +101,7 @@ function homeMov(data){
     const movies = data.results;
 
     const header =document.createElement('h2');
-    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
     <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
   </svg>`+" "+ "Movie";
     const cardColumn = document.createElement('div');
@@ -118,7 +120,7 @@ function homeMov(data){
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card h-100 text-white bg-dark');
+            movieBox.setAttribute('class','card h-100 text-white');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
@@ -139,7 +141,9 @@ function homeMov(data){
             movieBox.appendChild(cardBody);
 
             const rating = document.createElement('h6');
-            rating.innerHTML = movie.vote_average;
+            rating.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0085ca" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>`+" "+ movie.vote_average;
             cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h6');
@@ -159,7 +163,7 @@ function similarMov(data){
     const movies = data.results;
 
     const header =document.createElement('h2');
-    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
     <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
   </svg>`+" "+ "Similar Movie";
     const cardColumn = document.createElement('div');
@@ -179,7 +183,7 @@ function similarMov(data){
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card h-100 text-white bg-dark');
+            movieBox.setAttribute('class','card h-100 text-white');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
@@ -200,7 +204,9 @@ function similarMov(data){
             movieBox.appendChild(cardBody);
 
             const rating = document.createElement('h6');
-            rating.innerHTML = movie.vote_average;
+            rating.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0085ca" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>`+" "+ movie.vote_average;
             cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h6');
@@ -220,7 +226,7 @@ function trendMov(data){
     const movies = data.results;
 
     const header =document.createElement('h2');
-    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
     <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
   </svg>`+" "+ "Trending";
     const cardColumn = document.createElement('div');
@@ -240,7 +246,7 @@ function trendMov(data){
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card h-100 text-white bg-dark');
+            movieBox.setAttribute('class','card h-100 text-white');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
@@ -261,7 +267,9 @@ function trendMov(data){
             movieBox.appendChild(cardBody);
 
             const rating = document.createElement('h6');
-            rating.innerHTML = movie.vote_average;
+            rating.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0085ca" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>`+" "+ movie.vote_average;
             cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h6');
@@ -281,7 +289,7 @@ function homeAct(data){
     const actors = data.results;
 
     const header =document.createElement('h2');
-    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
     <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
   </svg>`+" "+ "Actor";
     const cardColumn = document.createElement('div');
@@ -299,7 +307,7 @@ function homeAct(data){
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card h-100 text-white bg-dark');
+            movieBox.setAttribute('class','card h-100 text-white');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
@@ -336,7 +344,7 @@ function trendAct(data){
     const actors = data.results;
 
     const header =document.createElement('h2');
-    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
     <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
   </svg>`+" "+ "Trending";
     const cardColumn = document.createElement('div');
@@ -354,7 +362,7 @@ function trendAct(data){
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card h-100 text-white bg-dark');
+            movieBox.setAttribute('class','card h-100 text-white');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
@@ -392,7 +400,7 @@ function homeTv(data){
     console.log(tvs);
 
     const header =document.createElement('h2');
-    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
     <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
   </svg>`+" "+ "TV";
     const cardColumn = document.createElement('div');
@@ -410,7 +418,7 @@ function homeTv(data){
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card h-100 text-white bg-dark');
+            movieBox.setAttribute('class','card h-100 text-white');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
@@ -431,7 +439,9 @@ function homeTv(data){
             movieBox.appendChild(cardBody);
 
             const rating = document.createElement('h6');
-            rating.innerHTML = tv.vote_average;
+            rating.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0085ca" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>`+" "+ tv.vote_average;
             cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h6');
@@ -452,7 +462,7 @@ function trendTv(data){
     console.log(tvs);
 
     const header =document.createElement('h2');
-    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
     <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
   </svg>`+" "+ "Trending";
     const cardColumn = document.createElement('div');
@@ -470,7 +480,7 @@ function trendTv(data){
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card h-100 text-white bg-dark');
+            movieBox.setAttribute('class','card h-100 text-white');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
@@ -491,7 +501,9 @@ function trendTv(data){
             movieBox.appendChild(cardBody);
 
             const rating = document.createElement('h6');
-            rating.innerHTML = tv.vote_average;
+            rating.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0085ca" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>`+" "+ tv.vote_average;
             cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h6');
@@ -519,7 +531,7 @@ function creditMov(data){
     const movies = data.cast;
 
     const header =document.createElement('h2');
-    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
     <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
   </svg>`+" "+ "Movie";
     const cardColumn = document.createElement('div');
@@ -539,7 +551,7 @@ function creditMov(data){
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card h-100 text-white bg-dark');
+            movieBox.setAttribute('class','card h-100 text-white');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
@@ -560,7 +572,9 @@ function creditMov(data){
             movieBox.appendChild(cardBody);
 
             const rating = document.createElement('h6');
-            rating.innerHTML = movie.vote_average;
+            rating.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0085ca" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>`+" "+ movie.vote_average;
             cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h6');
@@ -580,7 +594,7 @@ function similarTv(data){
     const movies = data.results;
 
     const header =document.createElement('h2');
-    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+    header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
     <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
   </svg>`+" "+ "Similar Shows";
     const cardColumn = document.createElement('div');
@@ -600,7 +614,7 @@ function similarTv(data){
             cardRow.appendChild(cardDiv);
 
             const movieBox = document.createElement('div');
-            movieBox.setAttribute('class','card h-100 text-white bg-dark');
+            movieBox.setAttribute('class','card h-100 text-white');
             cardDiv.appendChild(movieBox);
             
             const moviePage = document.createElement('a');
@@ -621,7 +635,9 @@ function similarTv(data){
             movieBox.appendChild(cardBody);
             
             const rating = document.createElement('h6');
-            rating.innerHTML = movie.vote_average;
+            rating.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0085ca" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+          </svg>`+" "+ movie.vote_average;
             cardBody.appendChild(rating);
             
             const bodyTittle = document.createElement('h6');
