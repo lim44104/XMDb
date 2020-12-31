@@ -41,25 +41,6 @@
       font-size: 3.5rem;
     }
   }
-  /*
-  a:link,
-  a:visited{
-    color: orangered;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s;
-  }
-  
-  a:hover,
-  a:active{
-    color: white;
-    background-color:orangered;
-    box-shadow: 0 1rem 2rem rgba(black,0.4);
-    transform: rotate(5deg) scale(1.2);
-    padding: 2px;
-  }
-
-  */
   
   .jumbotron{
     background-color: black;
@@ -195,6 +176,50 @@
     height: 320px;
   }
 
+  #nav {
+    position: absolute;
+  }
+  
+  #prev {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    background-color: #ceaaaa;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #next {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    background-color: #ceaaaa;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
   
   
 
