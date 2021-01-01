@@ -654,7 +654,7 @@ function similarTv(data){
 
 function createIframe(video) {
     const iframe = document.createElement('iframe');
-    iframe.setAttribute('class','col-3');
+    iframe.setAttribute('class','col-3 videostyle');
     iframe.src = `https://www.youtube.com/embed/${video.key}`;
     iframe.width = 360;
     iframe.height = 315;
@@ -665,7 +665,7 @@ function createIframe(video) {
 
 function createIframe2(video) {
     const iframe = document.createElement('iframe');
-    iframe.setAttribute('class','col');
+    iframe.setAttribute('class','col trailerstyle');
     iframe.src = `https://www.youtube.com/embed/${video.key}`;
     iframe.width = 300;
     iframe.height = 500;
