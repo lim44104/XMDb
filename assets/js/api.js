@@ -80,6 +80,13 @@ function getTopRatedMovies() {
     requestMovies(url, render, handleError);
 }
 
+function slideShowMovies() {
+    const path = '/movie/popular';
+    const url = generateUrl(path);
+
+    requestMovies(url, slideShowMov, handleError);
+}
+
 function getPopularMovies() {
     const path = '/movie/popular';
     const url = generateUrl(path);

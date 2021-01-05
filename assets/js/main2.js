@@ -526,6 +526,11 @@ function renderMovies(data) {
     console.log('Data: ',data);
 }
 
+function showMovies(data) {
+    const movieBlock = slideShowMov();
+    document.getElementById('slideshow').appendChild(movieBlock);
+}
+
 function creditMov(data){
     movieSec.innerHTML = '';
     const movies = data.cast;
@@ -704,6 +709,82 @@ function createVideo(data) {
         iframeRow.appendChild(iframe);
         document.getElementById("testing2").appendChild(iframeContainer);
     }
+}
+
+function slideShowMov(data){
+    
+    const movies = data.results;
+    console.log(movies);
+    
+    const length = movies.length > 5 ? 5 : movies.length;
+
+    const carouselContainer = document.createElement('div');
+    carouselContainer.setAttribute('id','carouselId');
+    carouselContainer.setAttribute('class','carousel slide');
+    carouselContainer.setAttribute('data-ride','carousel');
+    
+    const olol = document.createElement('ol');
+    olol.setAttribute('class','carousel-indicators');
+    carouselContainer.appendChild(olol);
+
+    const innerCarousel = document.createElement('div');
+    innerCarousel.setAttribute('class','carousel-inner');
+    carouselContainer.appendChild(innerCarousel);
+
+    for (let i = 0; i < length; i++){
+        const movie = movies[i];
+        if(i===0){
+            
+            const li = document.createElement('li');
+            li.setAttribute('data-target','#carouselId');
+            li.setAttribute('data-slide-to',i);
+            li.setAttribute('class','active');
+            olol.appendChild(li);
+
+            const carouselItem = document.createElement('div');
+            carouselItem.setAttribute('class','carousel-item active');
+            innerCarousel.appendChild(carouselItem);
+
+            const img = document.createElement('img');
+            img.src = imageUrl + movie.poster_path;
+            img.setAttribute('class','d-block w-100 clickme');
+            img.alt = movie.title;
+            carouselItem.appendChild(img);
+        }
+        else{
+            const li = document.createElement('li');
+            li.setAttribute('data-target','#carouselId');
+            li.setAttribute('data-slide-to',i);
+            olol.appendChild(li);
+
+            const carouselItem = document.createElement('div');
+            carouselItem.setAttribute('class','carousel-item');
+            innerCarousel.appendChild(carouselItem);
+
+            const img = document.createElement('img');
+            img.src = imageUrl + movie.poster_path;
+            img.setAttribute('class','d-block w-100 clickme');
+            img.alt = movie.title;
+            carouselItem.appendChild(img);
+        }
+        
+    }
+
+    const prev = document.createElement('a');
+    prev.setAttribute('class','carousel-control-prev');
+    prev.setAttribute('href','#carouselId');
+    prev.setAttribute('role','button');
+    prev.setAttribute('data-slide','prev');
+    carouselContainer.appendChild(prev);
+
+    const next = document.createElement('a');
+    next.setAttribute('class','carousel-control-next');
+    next.setAttribute('href','#carouselId');
+    next.setAttribute('role','button');
+    next.setAttribute('data-slide','next');
+    carouselContainer.appendChild(next);
+
+    document.getElementById("slideshow").appendChild(carouselContainer);
 }
 
 //Event Delegation
