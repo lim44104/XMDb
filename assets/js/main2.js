@@ -746,10 +746,19 @@ function slideShowMov(data){
             innerCarousel.appendChild(carouselItem);
 
             const img = document.createElement('img');
-            img.src = imageUrl + movie.poster_path;
+            img.src = imageUrl + movie.backdrop_path;
             img.setAttribute('class','d-block w-100 clickme');
             img.alt = movie.title;
             carouselItem.appendChild(img);
+
+            const captionContainer = document.createElement('div');
+            captionContainer.setAttribute('class','carousel-caption d-none d-block');
+            carouselItem.appendChild(captionContainer);
+
+            const slideMovTitle = document.createElement('h5');
+            slideMovTitle.innerHTML = movie.title;
+            captionContainer.appendChild(slideMovTitle);
+
         }
         else{
             const li = document.createElement('li');
@@ -762,10 +771,19 @@ function slideShowMov(data){
             innerCarousel.appendChild(carouselItem);
 
             const img = document.createElement('img');
-            img.src = imageUrl + movie.poster_path;
+            img.src = imageUrl + movie.backdrop_path;
             img.setAttribute('class','d-block w-100 clickme');
             img.alt = movie.title;
             carouselItem.appendChild(img);
+
+            const captionContainer = document.createElement('div');
+            captionContainer.setAttribute('class','carousel-caption d-none d-block');
+            carouselItem.appendChild(captionContainer);
+
+            const slideMovTitle = document.createElement('h5');
+            slideMovTitle.innerHTML = movie.title;
+            captionContainer.appendChild(slideMovTitle);
+
         }
         
     }
