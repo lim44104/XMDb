@@ -213,6 +213,10 @@
     margin-top: 50px;
   }
 
+  #trendSec{
+    margin-top: 50px;
+  }
+
   #movieDescription{
     margin-top: 30px;
   }
@@ -234,8 +238,13 @@
   }
 
   #movieMainTitle{
-    margin-top: 5%;
+    margin-top:40px;
   }
+
+  #slideshow{
+    margin-top:45px;
+  }
+
 
 
   

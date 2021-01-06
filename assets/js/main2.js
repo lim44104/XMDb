@@ -281,7 +281,7 @@ function trendMov(data){
         
         })
     
-    movieSec.appendChild(header);
+    trendSec.appendChild(header);
 }
 
 function homeAct(data){
@@ -391,7 +391,7 @@ function trendAct(data){
         
         })
     
-    movieSec.appendChild(header);
+    trendSec.appendChild(header);
 }
 
 function homeTv(data){
@@ -515,7 +515,7 @@ function trendTv(data){
         
         })
     
-    movieSec.appendChild(header);
+    trendSec.appendChild(header);
 }
 
 
@@ -659,7 +659,7 @@ function similarTv(data){
 
 function createIframe(video) {
     const iframe = document.createElement('iframe');
-    iframe.setAttribute('class','col-3 videostyle');
+    iframe.setAttribute('class','col-lg-4 col-md-6 col-sm-12 col-12 videostyle');
     iframe.src = `https://www.youtube.com/embed/${video.key}`;
     iframe.width = 360;
     iframe.height = 315;
@@ -747,12 +747,12 @@ function slideShowMov(data){
 
             const img = document.createElement('img');
             img.src = imageUrl + movie.backdrop_path;
-            img.setAttribute('class','d-block w-100 clickme');
+            img.setAttribute('class','d-block w-100 clickme img-fluid');
             img.alt = movie.title;
             carouselItem.appendChild(img);
 
             const captionContainer = document.createElement('div');
-            captionContainer.setAttribute('class','carousel-caption d-none d-block');
+            captionContainer.setAttribute('class','carousel-caption d-block');
             carouselItem.appendChild(captionContainer);
 
             const slideMovTitle = document.createElement('h5');
@@ -772,7 +772,7 @@ function slideShowMov(data){
 
             const img = document.createElement('img');
             img.src = imageUrl + movie.backdrop_path;
-            img.setAttribute('class','d-block w-100 clickme');
+            img.setAttribute('class','d-block w-100 clickme img-fluid');
             img.alt = movie.title;
             carouselItem.appendChild(img);
 
