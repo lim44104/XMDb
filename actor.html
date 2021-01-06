@@ -134,24 +134,9 @@
         fetch(url)
             .then((res) => res.json())
             .then(function(res){
-              console.log(res);
               actorName.innerHTML = res.name;
               actorDescription.innerHTML = res.biography;
               actorImage.src = imageUrl + res.profile_path;
-            })
-            .catch(() => {
-                console.log('Error: ',error);
-            })
-  }
-  
-  function movieCredit() {
-    var id = sessionStorage.getItem('id');
-    const path =`/person/${id}/movie_credits`;
-        const url = generateUrl(path);
-        fetch(url)
-            .then((res) => res.json())
-            .then(function(res){
-              console.log(res);    
             })
             .catch(() => {
                 console.log('Error: ',error);
@@ -166,7 +151,6 @@
   }
     
   singleactorfunction()
-  movieCredit()
   movieCredit2()
 </script>
   </body>

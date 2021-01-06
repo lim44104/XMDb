@@ -91,9 +91,6 @@ function renderSearchMovies(data) {
     const movies = data.results;
     const movieBlock = createMovieContainer(movies);
     movieSearchable.appendChild(movieBlock);
-    console.log('Data: ',data);
-    console.log(data.results[0].id);
-    console.log(data.results[0].overview);
 }
 
 function homeMov(data){
@@ -170,8 +167,6 @@ function similarMov(data){
     const cardRow = document.createElement('div');
     cardRow.setAttribute('class','row flex-row flex-nowrap');
     cardColumn.appendChild(cardRow);
-    console.log(movies);
-    console.log(movies.length);
 
     movies.map((movie) => {
         if(movie.poster_path){
@@ -230,8 +225,6 @@ function trendMov(data){
     const cardRow = document.createElement('div');
     cardRow.setAttribute('class','row flex-row flex-nowrap');
     cardColumn.appendChild(cardRow);
-    console.log(movies);
-    console.log(movies.length);
 
     movies.map((movie) => {
         if(movie.poster_path){
@@ -442,7 +435,6 @@ function homeTv(data){
 function trendTv(data){
     movieSec.innerHTML = '';
     const tvs = data.results;
-    console.log(tvs);
 
     const header =document.createElement('h2');
     header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
@@ -502,7 +494,6 @@ function renderMovies(data) {
     const movies = data.results;
     const movieBlock = createMovieContainer(movies, this.tittle);
     movieContainer.appendChild(movieBlock);
-    console.log('Data: ',data);
 }
 
 function creditMov(data){
@@ -520,8 +511,6 @@ function creditMov(data){
     const cardRow = document.createElement('div');
     cardRow.setAttribute('class','row flex-row flex-nowrap');
     cardColumn.appendChild(cardRow);
-    console.log(movies);
-    console.log(movies.length);
     
     movies.map((movie) => {
         if(movie.poster_path){
@@ -568,7 +557,6 @@ function creditMov(data){
 function similarTv(data){
     movieSec.innerHTML = '';
     const tvs = data.results;
-    console.log(tvs);
 
     const header =document.createElement('h2');
     header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
@@ -680,7 +668,6 @@ function createVideo(data) {
 
 function slideShowMov(data){
     const movies = data.results;
-    console.log(movies);
     const length = movies.length > 5 ? 5 : movies.length;
     const carouselContainer = document.createElement('div');
     carouselContainer.setAttribute('id','carouselId');
@@ -708,11 +695,18 @@ function slideShowMov(data){
             carouselItem.setAttribute('class','carousel-item active');
             innerCarousel.appendChild(carouselItem);
 
+            const moviePage = document.createElement('a');
+            moviePage.setAttribute('href',"movie.html");
+            moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('target','_blank');
+            moviePage.setAttribute('data-id',movie.id);
+            carouselItem.appendChild(moviePage);
+
             const img = document.createElement('img');
             img.src = imageUrl + movie.backdrop_path;
             img.setAttribute('class','d-block w-100 clickme img-fluid');
             img.alt = movie.title;
-            carouselItem.appendChild(img);
+            moviePage.appendChild(img);
 
             const captionContainer = document.createElement('div');
             captionContainer.setAttribute('class','carousel-caption d-block');
@@ -733,11 +727,18 @@ function slideShowMov(data){
             carouselItem.setAttribute('class','carousel-item');
             innerCarousel.appendChild(carouselItem);
 
+            const moviePage = document.createElement('a');
+            moviePage.setAttribute('href',"movie.html");
+            moviePage.setAttribute('class','clickToGetId');
+            moviePage.setAttribute('target','_blank');
+            moviePage.setAttribute('data-id',movie.id);
+            carouselItem.appendChild(moviePage);
+
             const img = document.createElement('img');
             img.src = imageUrl + movie.backdrop_path;
             img.setAttribute('class','d-block w-100 clickme img-fluid');
             img.alt = movie.title;
-            carouselItem.appendChild(img);
+            moviePage.appendChild(img);
 
             const captionContainer = document.createElement('div');
             captionContainer.setAttribute('class','carousel-caption d-none d-block');
