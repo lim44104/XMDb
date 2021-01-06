@@ -151,10 +151,7 @@ function homeMov(data){
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
         }
-        
-        
-        })
-    
+    })
     movieSec.appendChild(header);
 }
 
@@ -214,10 +211,7 @@ function similarMov(data){
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
         }
-        
-        
-        })
-    
+    })
     movieSec.appendChild(header);
 }
 
@@ -277,9 +271,7 @@ function trendMov(data){
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
         }
-        
-        
-        })
+    })
     
     trendSec.appendChild(header);
 }
@@ -332,10 +324,7 @@ function homeAct(data){
             bodyTittle.innerHTML = actor.name;
             cardBody.appendChild(bodyTittle);
         }
-        
-        
-        })
-    
+    })
     movieSec.appendChild(header);
 }
 
@@ -387,10 +376,7 @@ function trendAct(data){
             bodyTittle.innerHTML = actor.name;
             cardBody.appendChild(bodyTittle);
         }
-        
-        
-        })
-    
+    })
     trendSec.appendChild(header);
 }
 
@@ -449,10 +435,7 @@ function homeTv(data){
             bodyTittle.innerHTML = tv.name;
             cardBody.appendChild(bodyTittle);
         }
-        
-        
-        })
-    
+    })
     movieSec.appendChild(header);
 }
 
@@ -511,13 +494,9 @@ function trendTv(data){
             bodyTittle.innerHTML = tv.name;
             cardBody.appendChild(bodyTittle);
         }
-        
-        
-        })
-    
+    })
     trendSec.appendChild(header);
 }
-
 
 function renderMovies(data) {
     const movies = data.results;
@@ -582,10 +561,7 @@ function creditMov(data){
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
         }
-        
-        
-        })
-    
+    })
     movieSec.appendChild(header);
 }
 
@@ -644,10 +620,7 @@ function similarTv(data){
             bodyTittle.innerHTML = tv.name;
             cardBody.appendChild(bodyTittle);
         }
-        
-        
-        })
-    
+    })   
     movieSec.appendChild(header);
 }
 
@@ -679,7 +652,6 @@ function createVideoTemplate(data) {
     const length = videos.length > 1 ? 1 : videos.length;
     const iframeContainer = document.createElement('div');
 
-
     for (let i = 0; i < length; i++){
         const video = videos[i];//video
         const iframe = createIframe2(video);
@@ -707,12 +679,9 @@ function createVideo(data) {
 }
 
 function slideShowMov(data){
-    
     const movies = data.results;
     console.log(movies);
-    
     const length = movies.length > 5 ? 5 : movies.length;
-
     const carouselContainer = document.createElement('div');
     carouselContainer.setAttribute('id','carouselId');
     carouselContainer.setAttribute('class','carousel slide');
@@ -729,7 +698,6 @@ function slideShowMov(data){
     for (let i = 0; i < length; i++){
         const movie = movies[i];
         if(i===0){
-            
             const li = document.createElement('li');
             li.setAttribute('data-target','#carouselId');
             li.setAttribute('data-slide-to',i);
@@ -778,11 +746,8 @@ function slideShowMov(data){
             const slideMovTitle = document.createElement('h5');
             slideMovTitle.innerHTML = movie.title;
             captionContainer.appendChild(slideMovTitle);
-
         }
-        
     }
-
     const prev = document.createElement('a');
     prev.setAttribute('class','carousel-control-prev');
     prev.setAttribute('href','#carouselId');

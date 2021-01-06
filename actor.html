@@ -57,9 +57,7 @@
   </div>
 
   <div class="singleactor"></div>
-
   <div id="movieSec"></div>
-  
 
   <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
     <footer>
@@ -153,22 +151,19 @@
         fetch(url)
             .then((res) => res.json())
             .then(function(res){
-              console.log(res);
-              
+              console.log(res);    
             })
             .catch(() => {
                 console.log('Error: ',error);
             })
-}
+  }
 
-
-function movieCredit2() {
-    var id = sessionStorage.getItem('id');
-    const path =`/person/${id}/movie_credits`;
-    const url = generateUrl(path);
-    requestMovies(url, creditMov, handleError);
-}
-
+  function movieCredit2() {
+      var id = sessionStorage.getItem('id');
+      const path =`/person/${id}/movie_credits`;
+      const url = generateUrl(path);
+      requestMovies(url, creditMov, handleError);
+  }
     
   singleactorfunction()
   movieCredit()
