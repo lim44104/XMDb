@@ -25,7 +25,6 @@
 .navbar a:hover{
   color:#0085CA ;
 }
-
   
   .bd-placeholder-img {
     font-size: 1.125rem;
@@ -245,7 +244,22 @@
     margin-top:45px;
   }
 
+  #contact{
+    margin-top:45px;
+  }
 
+footer{
+  margin-top: 100px;
+  border-top: 1px solid white;
+}
+
+.socialmedia{
+  margin-top: 10px;
+}
+
+.smicon{
+  margin-left: 5px;
+}
 
   
   
