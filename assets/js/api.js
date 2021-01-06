@@ -32,10 +32,6 @@ function searchMovie2(value) {
     requestMovies(url, homeMov, handleError);
 }
 
-function printRes(data){
-    console.log(data);
-}
-
 function movieTrend() {
     const path = '/trending/movie/week';
     const url = generateUrl(path);

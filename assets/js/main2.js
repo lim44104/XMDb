@@ -526,11 +526,6 @@ function renderMovies(data) {
     console.log('Data: ',data);
 }
 
-function showMovies(data) {
-    const movieBlock = slideShowMov();
-    document.getElementById('slideshow').appendChild(movieBlock);
-}
-
 function creditMov(data){
     movieSec.innerHTML = '';
     const movies = data.cast;
