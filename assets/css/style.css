@@ -200,7 +200,9 @@ footer{
   margin-left: 5px;
 }
 
-  
+.animate__animated.animate__fadeIn {
+  --animate-duration: 1.5s;
+}
   
 
 

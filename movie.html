@@ -9,13 +9,14 @@
     <meta name="generator" content="Jekyll v4.1.1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>XMDb Movie</title>
     <link rel="icon" href="images/clip.jpg" type="image/x-icon">
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
 
-  <body class="single-movie">
+  <body class="animate__animated animate__fadeIn">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top navnav" style="background-color: #222222;">
       <a class="navbar-brand" href="index.html">
           <img class="cover" src="images/logo.png" alt="logo" style="width:80px;height:20px"> 
@@ -46,7 +47,7 @@
     </nav>
 
   <h2 id="movieMainTitle">Movie</h2>
-  <div class="card flex-md-row mb-4 box-shadow h-md-250" id="movieCard">
+  <div class="card flex-md-row mb-4 box-shadow h-md-250 animate__animated animate__slideInUp id="movieCard">
     <div>
       <img class="card-img-right flex-auto d-md-block img-fluid" id="movieImage" alt="Picture of Movie" src="">
     </div>
@@ -59,19 +60,17 @@
     </div>
   </div>
 
-  <div class="singlemovie"></div>
-
-  <div class="trailersec">
+  <div class="trailersec animate__animated animate__slideInUp">
     <h2>Trailer</h2>
     <div id="testing"></div>
   </div>
   
-  <div class="videosec">
+  <div class="videosec animate__animated animate__slideInUp">
     <h2>Video</h2>
     <div id="testing2"></div>
   </div>
 
-  <div id="movieSec"></div>
+  <div id="movieSec" class="animate__animated animate__slideInUp"></div>
 
   <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
     <footer>
