@@ -91,14 +91,30 @@ h1{
 
 h2{
   color: white;
+  font-family: 'Frank Ruhl Libre', serif;
+
 }
 
 h3{
   color: white;
+  font-family: 'Russo One', sans-serif;
+  letter-spacing: 1px;
 }
 
 p{
   color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+h6{
+  color: white;
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: medium;
+}
+
+h5{
+  color: white;
+  font-family: 'Frank Ruhl Libre', serif;
 }
 
 .row{
@@ -163,6 +179,10 @@ p{
   margin-top: 30px;
 }
 
+#movieLine{
+  bottom:0px;
+}
+
 .tstyle{
   color: rgba(255, 255, 255, 0.5);
 }
@@ -202,6 +222,10 @@ footer{
 
 .animate__animated.animate__fadeIn {
   --animate-duration: 1.5s;
+}
+
+#actorDescription{
+  margin-top: 30px;
 }
   
 
