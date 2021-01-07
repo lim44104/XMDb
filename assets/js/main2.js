@@ -668,7 +668,7 @@ function createVideo(data) {
 
 function slideShowMov(data){
     const movies = data.results;
-    const length = movies.length > 5 ? 5 : movies.length;
+    const length = movies.length > 7 ? 7 : movies.length;
     const carouselContainer = document.createElement('div');
     carouselContainer.setAttribute('id','carouselId');
     carouselContainer.setAttribute('class','carousel slide');
