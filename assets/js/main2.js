@@ -376,7 +376,6 @@ function trendAct(data){
 function homeTv(data){
     movieSec.innerHTML = '';
     const tvs = data.results;
-    console.log(tvs);
 
     const header =document.createElement('h2');
     header.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0085ca" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
