@@ -82,12 +82,14 @@ Failed API Call Error Alert | Pass
   
 ### How to clone this code?
   * Clone/Download this repository link to your own local host.
-  * Register an account in to get your own api keys.
+  * Register an account in [Movie Database API](https://www.themoviedb.org/) to get your own api keys.
   * Change the api key in api.js file.
   * This code is yours now!
   
 ## Credits
 ### Content
+* Movie Database API:
+  * https://www.themoviedb.org/
 * From line 1 to 22 in api.js and line 1 to 95 in main2.js refer to: 
   * https://www.youtube.com/watch?v=mWg2udweauY&t=3471s
 * Footer of this project refer to: 
