@@ -11,6 +11,8 @@ This website will allow users to search about movies, actors and tv shows. Users
   * Desktop: https://xd.adobe.com/view/2c12df28-9926-4a7b-9b66-d835ff15d7fc-7941/
   * Mobile: https://xd.adobe.com/view/1614cd81-16ca-433b-abf5-7af758c219f6-4347/
 
+  * Change 4 movie cards to 2 cards because I found out that the cards will be to small in mobile view.
+  * Change the similar movie to trending in search section because it is more suitable to put trending at this section.
 ## Features
 ### Existing Features
 1. Allows user to use this application as a Movie Database to search about all movies.
