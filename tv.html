@@ -21,8 +21,8 @@
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
 
-  <body class="animate__animated animate__fadeIn">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top navnav" style="background-color: #222222;">
+  <body class="animate__animated animate__fadeIn">  <!--animation-->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navnav" style="background-color: #222222;"> <!--navbar-->
       <a class="navbar-brand" href="index.html">
           <img class="cover" src="images/logo.png" alt="logo" style="width:80px;height:20px"> 
       </a>
@@ -51,7 +51,7 @@
       </div>
     </nav>
 
-  <h2 id="movieMainTitle">TV Show</h2>
+  <h2 id="movieMainTitle">TV Show</h2>  <!--tv shows card-->
   <div class="card flex-md-row mb-4 box-shadow h-md-250 animate__animated animate__slideInUp" id="movieCard">
     <div>
       <img class="card-img-right flex-auto d-md-block img-fluid" id="tvImage" alt="Picture of Tv" src="images/clip.jpg">
@@ -66,21 +66,19 @@
     </div>
   </div>
 
-  <div class="trailersec animate__animated animate__slideInUp">
+  <div class="trailersec animate__animated animate__slideInUp"> <!--trailer section-->
     <h2>Trailer</h2>
     <div id="testing"></div>
   </div>
   
-  <div class="videosec animate__animated animate__slideInUp">
+  <div class="videosec animate__animated animate__slideInUp"> <!--videos section-->
     <h2>Video</h2>
     <div id="testing2"></div>
   </div>
 
-  <div id="movieSec" class="animate__animated animate__slideInUp"></div>
+  <div id="movieSec" class="animate__animated animate__slideInUp"></div>  <!--similar shows section-->
 
-  
-
-  <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+  <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">  <!--footer-->
     <footer>
         <div class="row my-5 justify-content-center py-5">
             <div class="col-11">
@@ -149,10 +147,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
-  function singletvfunction() {
+  function singletvfunction() { //function to append tv shows information to tv cards
     var id = sessionStorage.getItem('id');
-    getVideosTv(id)
-    getVideosTv2(id)
+    getVideosTv(id) //function to append trailer to trailer section
+    getVideosTv2(id)  //function to append videos to video section
     const path =`/tv/${id}`;
         const url = generateUrl(path);
         fetch(url)
@@ -173,7 +171,7 @@
             })
   }
 
-  function similarShows() {
+  function similarShows() { //function to append similar shows to similar shows section
     var id = sessionStorage.getItem('id');
     const path =`/tv/${id}/similar`;
     const url = generateUrl(path);
