@@ -13,6 +13,7 @@ This website will for users to search about movies, actors and tv shows. Users c
 
   * Change 4 movie cards to 2 cards because I found out that the cards will be to small in mobile view.
   * Change the similar movie to trending in search section because it is more suitable to put trending at this section.
+  
 ## Features
 ### Existing Features
 1. Allows user to use this application as a Movie Database to search about all movies.
@@ -35,6 +36,7 @@ This website will for users to search about movies, actors and tv shows. Users c
 ### Plans for additional features to be implemented in the future
 1. Allows user to create an account.
 2. Allows user to rate and comment on the movie, tvshow and actor.
+
 
 ## Technologies Used
 * HTML
@@ -75,6 +77,7 @@ Responsive Nav Bar | Pass
 Responsive Images and Videos | Pass
 Failed API Call Error Alert | Pass
 
+
 ## Deployment
 ### Github link
   * Repository: https://github.com/lim44104/ID_LimXuanQing_Assignment2
@@ -85,6 +88,7 @@ Failed API Call Error Alert | Pass
   * Register an account in [Movie Database API](https://www.themoviedb.org/) to get your own api keys.
   * Change the api key in api.js file.
   * This code is yours now!
+  
   
 ## Credits
 ### Content
