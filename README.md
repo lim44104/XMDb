@@ -16,22 +16,22 @@ This website will for users to search about movies, actors and tv shows. Users c
   
 ## Features
 ### Existing Features
-1. Allows user to use this application as a Movie Database to search about all movies.
-2. Allows user to use this application as a Actor Database to search about all actors.
-3. Allows user to use this application as a TV Show Database to search about all TV shows.
-4. Allows user to get the information of a movie such as movie overview, movie rating, movie release date, movie run time, trailer, videos and so on.
-5. Allows user to get the information of an actor such as actor name, actor introduction and the movie that he/she take part in.
-6. Allows user to get the infor mation of a TV show such as tvshow overview, tvshow rating, tvshow release date, tvshow seasons and episodes, trailer, videos and so on.
-7. Allows user to find similar movie or similar tv show of the movie/tvshow that they are interested.
-8. Allows user to know about the Top Rated Movies in the home page.
-9. Allows user to know about the Popular Movies in the home page.
-10. Allows user to know about the Now Playing Movies in the home page.
-11. Allows user to know about the Upcoming Movies in the home page.
-12. Allows user to know about the Trending movies, actor and tv shows in search page.
-13. Allows user to give feedback or give suggestion to improve the website by fill in the contact form.
-14. Allows user to get the social media account of movie database such as facebook, instagram, twitter and google by clicking the icon in footer. 
-15. Responsive Website - The layout and photo will resize and change according to the users' screen size.
-16. Collapsible Hamburger Mobile Menu.
+1. Allows user to use this application as a Movie Database to **search about all movies**.
+2. Allows user to use this application as a Actor Database to **search about all actors**.
+3. Allows user to use this application as a TV Show Database to **search about all TV shows**.
+4. Allows user to **get the information of a movie** such as movie overview, movie rating, movie release date, movie run time, trailer, videos and so on.
+5. Allows user to **get the information of an actor** such as actor name, actor introduction and the movie that he/she take part in.
+6. Allows user to **get the information of a TV show** such as tvshow overview, tvshow rating, tvshow release date, tvshow seasons and episodes, trailer, videos and so on.
+7. Allows user to **find similar movie or similar tv show** of the movie/tvshow that they are interested.
+8. Allows user to know about the **Top Rated Movies** in the home page.
+9. Allows user to know about the **Popular Movies** in the home page.
+10. Allows user to know about the **Now Playing Movies** in the home page.
+11. Allows user to know about the **Upcoming Movies** in the home page.
+12. Allows user to know about the **Trending movies, actor and tv shows** in search page.
+13. Allows user to **give feedback or give suggestion** to improve the website by fill in the contact form.
+14. Allows user to get the **social media account of movie database** such as facebook, instagram, twitter and google by clicking the icon in footer. 
+15. **Responsive Website** - The layout and photo will resize and change according to the users' screen size.
+16. **Collapsible Hamburger Mobile Menu**.
 
 ### Plans for additional features to be implemented in the future
 1. Allows user to create an account.
@@ -72,6 +72,7 @@ This website will for users to search about movies, actors and tv shows. Users c
 
   Test    | Pass/Fail
 --------- | ---------
+Click on link and open in new tab | Pass
 Responsive Cards | Pass
 Responsive Nav Bar | Pass
 Responsive Images and Videos | Pass
@@ -89,7 +90,7 @@ Failed API Call Error Alert | Pass
   * Change the api key in api.js file.
   * This code is yours now!
   
-  
+
 ## Credits
 ### Content
 * Movie Database API:
