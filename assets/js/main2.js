@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 //select elements from the DOM
 const buttonElement = document.querySelector('#search');
 const inputElement = document.querySelector('#inputValue');
@@ -66,7 +67,7 @@ function movieSection(movies) {
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
         }
-    })
+    });
     return section;
 }
 
@@ -148,7 +149,7 @@ function homeMov(data){
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
         }
-    })
+    });
     movieSec.appendChild(header);
 }
 
@@ -206,7 +207,7 @@ function similarMov(data){
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
         }
-    })
+    });
     movieSec.appendChild(header);
 }
 
@@ -264,7 +265,7 @@ function trendMov(data){
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
         }
-    })
+    });
     
     trendSec.appendChild(header);
 }
@@ -317,7 +318,7 @@ function homeAct(data){
             bodyTittle.innerHTML = actor.name;
             cardBody.appendChild(bodyTittle);
         }
-    })
+    });
     movieSec.appendChild(header);
 }
 
@@ -369,7 +370,7 @@ function trendAct(data){
             bodyTittle.innerHTML = actor.name;
             cardBody.appendChild(bodyTittle);
         }
-    })
+    });
     trendSec.appendChild(header);
 }
 
@@ -427,7 +428,7 @@ function homeTv(data){
             bodyTittle.innerHTML = tv.name;
             cardBody.appendChild(bodyTittle);
         }
-    })
+    });
     movieSec.appendChild(header);
 }
 
@@ -485,7 +486,7 @@ function trendTv(data){
             bodyTittle.innerHTML = tv.name;
             cardBody.appendChild(bodyTittle);
         }
-    })
+    });
     trendSec.appendChild(header);
 }
 
@@ -549,7 +550,7 @@ function creditMov(data){
             bodyTittle.innerHTML = movie.title;
             cardBody.appendChild(bodyTittle);
         }
-    })
+    });
     movieSec.appendChild(header);
 }
 
@@ -607,7 +608,7 @@ function similarTv(data){
             bodyTittle.innerHTML = tv.name;
             cardBody.appendChild(bodyTittle);
         }
-    })   
+    });
     movieSec.appendChild(header);
 }
 
@@ -771,5 +772,5 @@ document.onclick = function(event) {
     $(document).on('click','.clickToGetId',function(){
         id = $(this).attr('data-id');
         sessionStorage.setItem('id',id);
-    })
-}
+    });
+};

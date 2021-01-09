@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 //Initial value
 const apikey = '5a6524ebb7458c68806548b48e1b9f61';
 const url = 'https://api.themoviedb.org/3/search/movie?api_key=5a6524ebb7458c68806548b48e1b9f61';
