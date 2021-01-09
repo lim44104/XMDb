@@ -41,7 +41,7 @@ This website will for users to search about movies, actors and tv shows. Users c
 * CSS
 * Javascript
 * [JQuery](https://jquery.com/)
-* [Bootstrap]()
+* [Bootstrap](https://getbootstrap.com/)
   * The project uses Bootstrap to simplify the css stylesheet.
 * Fetch
 * Adobe XD
