@@ -32,6 +32,7 @@ This website will for users to search about movies, actors and tv shows. Users c
 14. Allows user to get the **social media account of movie database** such as facebook, instagram, twitter and google by clicking the icon in footer. 
 15. **Responsive Website** - The layout and photo will resize and change according to the users' screen size.
 16. **Collapsible Hamburger Mobile Menu**.
+17. **Slideshow** of the Popular Movie.
 
 ### Plans for additional features to be implemented in the future
 1. Allows user to create an account.
