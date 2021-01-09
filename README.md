@@ -95,12 +95,13 @@ Failed API Call Error Alert | Pass
 ### Content
 * Movie Database API:
   * https://www.themoviedb.org/
+* Bootstrap template used: 
+  * https://getbootstrap.com/docs/4.0/examples/jumbotron/
 * From line 1 to 22 in api.js and line 1 to 95 in main2.js refer to: 
   * https://www.youtube.com/watch?v=mWg2udweauY&t=3471s
 * Footer of this project refer to: 
   * https://bbbootstrap.com/snippets/simple-footer-social-media-icons-37929510
-* Bootstrap template used: 
-  * https://getbootstrap.com/docs/4.0/examples/jumbotron/
+
 
 ### Media
 * The photos used in this site were obtained from:
@@ -110,5 +111,5 @@ Failed API Call Error Alert | Pass
    * https://pngtree.com/freepng/film-logo-design-template-vector-isolated-illustration_4978599.html
 
 ### Acknowledgements
-* I received inspiration for this project from IMDB.
-* My family members and friends halp me and give suggestion to my website.
+* I received inspiration for this project from [IMDb](https://www.imdb.com/?ref_=nv_home).
+* My family members and friends give suggestions to my website.
