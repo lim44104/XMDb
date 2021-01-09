@@ -21,8 +21,8 @@
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
 
-  <body class="animate__animated animate__fadeIn">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top navnav" style="background-color: #222222;">
+  <body class="animate__animated animate__fadeIn"><!--Animation-->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navnav" style="background-color: #222222;"><!--Navbar-->
       <a class="navbar-brand" href="index.html">
           <img class="cover" src="images/logo.png" alt="logo" style="width:80px;height:20px"> 
       </a>
@@ -51,7 +51,7 @@
       </div>
     </nav>
 
-  <h2 id="movieMainTitle">Actor</h2>
+  <h2 id="movieMainTitle">Actor</h2><!--Actor card-->
   <div class="card flex-md-row mb-4 box-shadow h-md-250 animate__animated animate__slideInUp" id="movieCard">
     <div>
       <img class="card-img-right flex-auto d-md-block img-fluid" id="actorImage" alt="Picture of Actor" src="images/clip.jpg">
@@ -62,9 +62,9 @@
     </div>
   </div>
 
-  <div id="movieSec" class="animate__animated animate__slideInUp"></div>
+  <div id="movieSec" class="animate__animated animate__slideInUp"></div><!--Credit movie section-->
 
-  <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+  <div class="container-fluid pb-0 mb-0 justify-content-center text-light "><!--Footer-->
     <footer>
         <div class="row my-5 justify-content-center py-5">
             <div class="col-11">
@@ -133,8 +133,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
-  function singleactorfunction() {
-    var id = sessionStorage.getItem('id');
+  function singleactorfunction() {  //function to append actor information to actor card
+    var id = sessionStorage.getItem('id');  //get id from session storage
     const path =`/person/${id}`;
         const url = generateUrl(path);
         fetch(url)
@@ -142,14 +142,14 @@
             .then(function(res){
               actorName.innerHTML = res.name;
               actorDescription.innerHTML = res.biography;
-              actorImage.src = imageUrl + res.profile_path;
+              actorImage.src = imageUrl + res.profile_path; //append data to card
             })
             .catch(() => {
                 console.log('Error: ',error);
             })
   }
 
-  function movieCredit2() {
+  function movieCredit2() { //function to load credit movies of actor
       var id = sessionStorage.getItem('id');
       const path =`/person/${id}/movie_credits`;
       const url = generateUrl(path);

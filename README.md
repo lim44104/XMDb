@@ -98,7 +98,7 @@ Failed API Call Error Alert | Pass
   * https://www.themoviedb.org/
 * Bootstrap template used: 
   * https://getbootstrap.com/docs/4.0/examples/jumbotron/
-* From line 1 to 22 in api.js and line 1 to 95 in main2.js refer to: 
+* From line 5 to 34 in api.js and line 23 to 100 in main2.js refer to: 
   * https://www.youtube.com/watch?v=mWg2udweauY&t=3471s
 * Footer of this project refer to: 
   * https://bbbootstrap.com/snippets/simple-footer-social-media-icons-37929510
