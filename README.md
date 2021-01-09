@@ -3,7 +3,7 @@ This project is a Movie, Actor and TV Show Database Website. This website will a
 
 ## Design Process
 
-This website will allow users to search about movies, actors and tv shows. Users could get the details and information of the movie, actor and tv shows.
+This website will for users to search about movies, actors and tv shows. Users could get the details and information of the movie, actor and tv shows. This project will become an useful database for users to search about movies, actors and tvshows that they wish to know more.
 
 * As a user, I want to get to know about details and information of a movie, actor or a tv show. This website allowed me to watch trailer, videos, rating and similar movie of the movie/tvshow that I would like to search.
 
@@ -40,16 +40,16 @@ This website will allow users to search about movies, actors and tv shows. Users
 * HTML
 * CSS
 * Javascript
-* JQuery
-* Bootstrap
+* [JQuery](https://jquery.com/)
+* [Bootstrap]()
   * The project uses Bootstrap to simplify the css stylesheet.
 * Fetch
 * Adobe XD
   * The project uses Adobe XD to design the wireframes.
 * Google Fonts
-* W3C validator (HTML)
-* Jigsaw Validator (CSS)
-* JS Hint (JS)
+* [W3C validator (HTML)](https://validator.w3.org/)
+* [Jigsaw Validator (CSS)](https://jigsaw.w3.org/css-validator/)
+* [JS Hint (JS)](https://jshint.com/)
 
 
 ## Testing
@@ -57,12 +57,12 @@ This website will allow users to search about movies, actors and tv shows. Users
 2. The image and video will resize according to the screen size.
 3. The menu bar will stack to each other in mobile device.
 4. The quantity of cards of all pages will change according to the screen size.
-5. W3c Mark Up Validationn
-6. W3c CSS Validation
-7. JS Hint
-8. W3C Link Checking
-9. Color Contrast Accessibility Validaton
-10. Spell Checking
+5. [W3c Mark Up Validation](https://validator.w3.org/)
+6. [W3c CSS Validation](https://jigsaw.w3.org/css-validator/)
+7. [JS Hint](https://jshint.com/)
+8. [W3C Link Checking](https://validator.w3.org/checklink)
+9. [Color Contrast Accessibility Validaton](https://color.a11y.com/Contrast/)
+10. [Spell Checking](https://typosaur.us/)
 11. Compatibility Testing
     1.  Testing was done using Chrom DevTool's Mobile Simulation. The pages, graphics and cards are checked for it's responsiveness to ensure no codes are broken and no layout runs out of the screen.
 12. User Acceptance Testing
@@ -84,18 +84,23 @@ Failed API Call Error Alert | Pass
   * Clone/Download this repository link to your own local host.
   * Register an account in to get your own api keys.
   * Change the api key in api.js file.
-  * This code is your now!
+  * This code is yours now!
   
 ## Credits
 ### Content
-* From line 1 to 22 in api.js and line 1 to 95 in main2.js refer to: https://www.youtube.com/watch?v=mWg2udweauY&t=3471s
-* Footer of this project refer to: https://bbbootstrap.com/snippets/simple-footer-social-media-icons-37929510
-* Bootstrap template used: https://getbootstrap.com/docs/4.0/examples/jumbotron/
+* From line 1 to 22 in api.js and line 1 to 95 in main2.js refer to: 
+  * https://www.youtube.com/watch?v=mWg2udweauY&t=3471s
+* Footer of this project refer to: 
+  * https://bbbootstrap.com/snippets/simple-footer-social-media-icons-37929510
+* Bootstrap template used: 
+  * https://getbootstrap.com/docs/4.0/examples/jumbotron/
 
 ### Media
 * The photos used in this site were obtained from:
- * Logo in Nav Bar: https://smashinglogo.com/en/editor?s=bsvs4tinv-xhlw3gkg0
- * X-Icon: https://pngtree.com/freepng/film-logo-design-template-vector-isolated-illustration_4978599.html
+ * Logo in Nav Bar: 
+   * https://smashinglogo.com/en/editor?s=bsvs4tinv-xhlw3gkg0
+ * X-Icon: 
+   * https://pngtree.com/freepng/film-logo-design-template-vector-isolated-illustration_4978599.html
 
 ### Acknowledgements
 * I received inspiration for this project from IMDB.
