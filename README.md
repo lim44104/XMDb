@@ -33,6 +33,7 @@ This website will for users to search about movies, actors and tv shows. Users c
 15. **Responsive Website** - The layout and photo will resize and change according to the users' screen size.
 16. **Collapsible Hamburger Mobile Menu**.
 17. **Slideshow** of the Popular Movie.
+18. **Validate Contact Form**
 
 ### Plans for additional features to be implemented in the future
 1. Allows user to create an account.
@@ -53,6 +54,8 @@ This website will for users to search about movies, actors and tv shows. Users c
 * [W3C validator (HTML)](https://validator.w3.org/)
 * [Jigsaw Validator (CSS)](https://jigsaw.w3.org/css-validator/)
 * [JS Hint (JS)](https://jshint.com/)
+* [Formspree](https://formspree.io/)
+* [JS Delivr](https://www.jsdelivr.com/)
 
 
 ## Testing
@@ -78,6 +81,7 @@ Responsive Cards | Pass
 Responsive Nav Bar | Pass
 Responsive Images and Videos | Pass
 Failed API Call Error Alert | Pass
+Contact Form | Pass
 
 
 ## Deployment
@@ -86,7 +90,7 @@ Failed API Call Error Alert | Pass
   * Website: https://lim44104.github.io/ID_LimXuanQing_Assignment2/
   
 ### How to clone this code?
-  * Clone/Download this repository link to your own local host.
+  * Download this repository code to your own local host.
   * Register an account in [Movie Database API](https://www.themoviedb.org/) to get your own api keys.
   * Change the api key in api.js file.
   * This code is yours now!
@@ -102,6 +106,8 @@ Failed API Call Error Alert | Pass
   * https://www.youtube.com/watch?v=mWg2udweauY&t=3471s
 * Footer of this project refer to: 
   * https://bbbootstrap.com/snippets/simple-footer-social-media-icons-37929510
+* Contact form of this project refer to:
+  * https://www.youtube.com/watch?v=eg4e-FObyJ8
 
 
 ### Media
