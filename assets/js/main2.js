@@ -45,7 +45,6 @@ function movieSection(movies) {
             const moviePage = document.createElement('a');  //link to single movie page
             moviePage.setAttribute('href',"movie.html");
             moviePage.setAttribute('class','clickToGetId'); //get the movie id
-            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',movie.id);
             movieBox.appendChild(moviePage);
             
@@ -129,7 +128,6 @@ function homeMov(data){
             
             const moviePage = document.createElement('a');  //link card to single movie page
             moviePage.setAttribute('href',"movie.html");
-            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('class','clickToGetId'); //class to get movie id
             moviePage.setAttribute('data-id',movie.id);
             movieBox.appendChild(moviePage);
@@ -189,7 +187,6 @@ function similarMov(data){
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"movie.html");
             moviePage.setAttribute('class','clickToGetId');
-            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',movie.id);
             movieBox.appendChild(moviePage);
             
@@ -248,7 +245,6 @@ function trendMov(data){
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"movie.html");
             moviePage.setAttribute('class','clickToGetId');
-            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',movie.id);
             movieBox.appendChild(moviePage);
             
@@ -308,7 +304,6 @@ function homeAct(data){
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"actor.html");
             moviePage.setAttribute('class','clickToGetId');
-            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',actor.id);
             movieBox.appendChild(moviePage);
             
@@ -361,7 +356,6 @@ function trendAct(data){
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"actor.html");
             moviePage.setAttribute('class','clickToGetId');
-            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',actor.id);
             movieBox.appendChild(moviePage);
             
@@ -414,7 +408,6 @@ function homeTv(data){
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"tv.html");
             moviePage.setAttribute('class','clickToGetId');
-            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',tv.id);
             movieBox.appendChild(moviePage);
             
@@ -473,7 +466,6 @@ function trendTv(data){
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"tv.html");
             moviePage.setAttribute('class','clickToGetId');
-            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',tv.id);
             movieBox.appendChild(moviePage);
             
@@ -539,7 +531,6 @@ function creditMov(data){
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"movie.html");
             moviePage.setAttribute('class','clickToGetId');
-            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',movie.id);
             movieBox.appendChild(moviePage);
             
@@ -598,7 +589,6 @@ function similarTv(data){
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"tv.html");
             moviePage.setAttribute('class','clickToGetId');
-            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',tv.id);
             movieBox.appendChild(moviePage);
             
@@ -716,7 +706,6 @@ function slideShowMov(data){
             const moviePage = document.createElement('a');  //link slide to single movie page
             moviePage.setAttribute('href',"movie.html");
             moviePage.setAttribute('class','clickToGetId'); //get movie id
-            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',movie.id);
             carouselItem.appendChild(moviePage);
 
@@ -748,7 +737,6 @@ function slideShowMov(data){
             const moviePage = document.createElement('a');
             moviePage.setAttribute('href',"movie.html");
             moviePage.setAttribute('class','clickToGetId');
-            moviePage.setAttribute('target','_blank');
             moviePage.setAttribute('data-id',movie.id);
             carouselItem.appendChild(moviePage);
 
