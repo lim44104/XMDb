@@ -1,6 +1,11 @@
 # ID_LimXuanQing_Assignment2
 This project is a Movie, Actor and TV Show Database Website. This website will allow users to search about movies, actors and tv shows. Users could get the details and information of the movie, actor and tv shows.
 
+## Deployment
+### Github link
+  * Repository: https://github.com/lim44104/ID_LimXuanQing_Assignment2
+  * Website: https://lim44104.github.io/ID_LimXuanQing_Assignment2/
+
 ## Design Process
 
 This website will for users to search about movies, actors and tv shows. Users could get the details and information of the movie, actor and tv shows. This project will become an useful database for users to search about movies, actors and tvshows that they wish to know more.
@@ -83,11 +88,6 @@ Responsive Images and Videos | Pass
 Failed API Call Error Alert | Pass
 Contact Form | Pass
 
-
-## Deployment
-### Github link
-  * Repository: https://github.com/lim44104/ID_LimXuanQing_Assignment2
-  * Website: https://lim44104.github.io/ID_LimXuanQing_Assignment2/
   
 ### How to clone this code?
   * Download this repository code to your own local host.
