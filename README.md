@@ -3,8 +3,8 @@ This project is a Movie, Actor and TV Show Database Website. This website will a
 
 ## Deployment
 ### Github link
-  * Repository: https://github.com/lim44104/ID_LimXuanQing_Assignment2
-  * Website: https://lim44104.github.io/ID_LimXuanQing_Assignment2/
+  * Repository: https://github.com/lim44104/XMDb
+  * Website: https://lim44104.github.io/XMDb/
 
 ## Design Process
 
